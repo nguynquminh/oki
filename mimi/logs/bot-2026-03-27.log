@@ -1,0 +1,399 @@
+[2026-03-27T03:15:09.352Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T03:15:09.353Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T03:15:09.372Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T03:15:09.372Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T03:15:14.391Z] ❌ ❌ Retry thất bại:
+undefined
+[2026-03-27T03:16:05.373Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T03:16:05.373Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T03:16:05.383Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T03:16:05.384Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T03:16:10.401Z] ❌ ❌ Retry thất bại:
+undefined
+[2026-03-27T03:21:55.767Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T03:21:55.777Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T03:21:55.777Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T03:22:00.797Z] ❌ ❌ Retry thất bại:
+undefined
+[2026-03-27T03:25:15.068Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T03:25:15.939Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-27T03:26:27.963Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T03:26:27.964Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T03:26:28.507Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T03:26:28.508Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T03:26:33.519Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T03:26:33.624Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T03:26:33.626Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T03:26:33.631Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T03:26:33.631Z] ℹ️  ✅ Đã load Events
+[2026-03-27T03:26:35.069Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T03:26:35.070Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T03:26:35.075Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T03:27:27.213Z] ❌ Error incrementing message:
+TypeError: GuildStats.updateStats is not a function
+    at StatsCollector.incrementMessage (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\stats\statsCollector.js:25:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:10:13)
+[2026-03-27T03:27:27.898Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T03:27:33.845Z] ❌ Error incrementing message:
+TypeError: GuildStats.updateStats is not a function
+    at StatsCollector.incrementMessage (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\stats\statsCollector.js:25:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:10:13)
+[2026-03-27T03:27:38.820Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T03:27:46.823Z] ❌ Error incrementing message:
+TypeError: GuildStats.updateStats is not a function
+    at StatsCollector.incrementMessage (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\stats\statsCollector.js:25:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:10:13)
+[2026-03-27T03:27:48.008Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T03:28:16.502Z] ❌ Error incrementing message:
+TypeError: GuildStats.updateStats is not a function
+    at StatsCollector.incrementMessage (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\stats\statsCollector.js:25:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:10:13)
+[2026-03-27T03:28:17.304Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T03:28:26.247Z] ❌ Error incrementing message:
+TypeError: GuildStats.updateStats is not a function
+    at StatsCollector.incrementMessage (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\stats\statsCollector.js:25:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:10:13)
+[2026-03-27T03:28:30.859Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T03:34:29.612Z] ❌ Error incrementing message:
+TypeError: GuildStats.updateStats is not a function
+    at StatsCollector.incrementMessage (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\stats\statsCollector.js:25:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:10:13)
+[2026-03-27T03:34:30.377Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T03:34:36.087Z] ❌ Error incrementing message:
+TypeError: GuildStats.updateStats is not a function
+    at StatsCollector.incrementMessage (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\stats\statsCollector.js:25:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:10:13)
+[2026-03-27T03:34:37.373Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T03:34:50.558Z] ❌ Error incrementing message:
+TypeError: GuildStats.updateStats is not a function
+    at StatsCollector.incrementMessage (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\stats\statsCollector.js:25:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:10:13)
+[2026-03-27T03:34:51.184Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T03:54:08.522Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T03:54:08.523Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T03:54:09.080Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T03:54:09.081Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T03:54:14.087Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T03:54:14.148Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T03:54:14.149Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T03:54:14.152Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T03:54:14.153Z] ℹ️  ✅ Đã load Events
+[2026-03-27T03:54:15.581Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T03:54:15.581Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T03:54:15.586Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T03:54:30.663Z] ❌ Error incrementing message:
+TypeError: GuildStats.updateStats is not a function
+    at StatsCollector.incrementMessage (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\stats\statsCollector.js:25:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:10:13)
+[2026-03-27T03:54:31.323Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T04:05:52.477Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T04:05:52.478Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T04:05:53.001Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T04:05:53.002Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T04:05:58.013Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T04:05:58.079Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T04:05:58.080Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T04:05:58.083Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T04:05:58.083Z] ℹ️  ✅ Đã load Events
+[2026-03-27T04:05:59.721Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T04:05:59.721Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T04:05:59.726Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T04:06:11.208Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T19:57:23.422Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T19:57:23.423Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T19:57:24.056Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T19:57:24.057Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T19:57:29.072Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T19:57:29.158Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T19:57:29.159Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T19:57:29.161Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T19:57:29.161Z] ℹ️  ✅ Đã load Events
+[2026-03-27T19:57:30.793Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T19:57:30.794Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T19:57:30.801Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T19:57:44.937Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T19:57:44.938Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T19:57:45.522Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T19:57:45.522Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T19:57:50.528Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T19:57:50.583Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T19:57:50.584Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T19:57:50.586Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T19:57:50.587Z] ℹ️  ✅ Đã load Events
+[2026-03-27T19:57:52.068Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T19:57:52.068Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T19:57:52.073Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T19:58:05.930Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T19:58:06.208Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T19:58:49.941Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T19:58:50.175Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T19:59:19.021Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T19:59:19.129Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T19:59:39.930Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T19:59:40.183Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:00:43.374Z] ❌ safeReply error:
+undefined
+[2026-03-27T20:00:43.602Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:00:43.862Z] ❌ safeReply fallback failed:
+undefined
+[2026-03-27T20:00:45.358Z] ❌ DisTube play error:
+undefined
+[2026-03-27T20:00:45.359Z] ❌ Lỗi handlePlayMusic:
+undefined
+[2026-03-27T20:00:45.754Z] ❌ safeReply error:
+undefined
+[2026-03-27T20:00:46.146Z] ❌ safeReply fallback failed:
+undefined
+[2026-03-27T20:00:46.265Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:01:03.521Z] ❌ safeReply error:
+undefined
+[2026-03-27T20:01:03.686Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:01:04.091Z] ❌ safeReply fallback failed:
+undefined
+[2026-03-27T20:01:26.845Z] ℹ️  🎵 Dừng phát nhạc và cleanup queue...
+[2026-03-27T20:01:28.277Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:01:28.683Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:01:34.143Z] ❌ DisTube play error:
+undefined
+[2026-03-27T20:01:34.144Z] ❌ Lỗi handlePlayMusic:
+undefined
+[2026-03-27T20:01:34.625Z] ❌ safeReply error:
+undefined
+[2026-03-27T20:01:35.110Z] ❌ safeReply fallback failed:
+undefined
+[2026-03-27T20:01:35.217Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:05:07.402Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T20:05:07.403Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T20:05:08.084Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T20:05:08.085Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T20:05:13.099Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T20:05:13.177Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T20:05:13.178Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T20:05:13.185Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T20:05:13.185Z] ℹ️  ✅ Đã load Events
+[2026-03-27T20:05:16.390Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T20:05:16.391Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T20:05:16.395Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T20:05:30.281Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:05:30.407Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:06:08.386Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:06:14.390Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:07:39.930Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T20:07:39.931Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T20:07:40.496Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T20:07:40.496Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T20:07:45.508Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T20:07:45.576Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T20:07:45.577Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T20:07:45.580Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T20:07:45.580Z] ℹ️  ✅ Đã load Events
+[2026-03-27T20:07:47.195Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T20:07:47.195Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T20:07:47.199Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T20:08:09.342Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T20:08:09.469Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T20:11:02.493Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T20:11:02.494Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T20:11:03.048Z] ❌ ❌ Lỗi kết nối MongoDB:
+undefined
+[2026-03-27T20:11:03.048Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T20:11:08.062Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T20:11:08.122Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T20:11:08.123Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T20:11:08.126Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T20:11:08.126Z] ℹ️  ✅ Đã load Events
+[2026-03-27T20:11:09.715Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T20:11:09.716Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T20:11:09.720Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T20:11:26.933Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:11:47.522Z] ❌ safeReply error:
+undefined
+[2026-03-27T20:11:48.016Z] ❌ safeReply fallback failed:
+undefined
+[2026-03-27T20:11:49.440Z] ❌ DisTube play error:
+undefined
+[2026-03-27T20:11:49.442Z] ❌ Lỗi handlePlayMusic:
+undefined
+[2026-03-27T20:11:49.854Z] ❌ safeReply error:
+undefined
+[2026-03-27T20:11:50.216Z] ❌ safeReply fallback failed:
+undefined
+[2026-03-27T20:11:50.334Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:12:26.341Z] ℹ️  🎵 Pomodoro end: Cleanup queue...
+[2026-03-27T20:13:46.296Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T20:13:46.296Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T20:13:46.862Z] ❌ ❌ Lỗi kết nối MongoDB:
+Cannot overwrite `DailyStats` model once compiled.
+[2026-03-27T20:13:46.862Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T20:13:51.872Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T20:13:51.938Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T20:13:51.939Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T20:13:51.942Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T20:13:51.942Z] ℹ️  ✅ Đã load Events
+[2026-03-27T20:13:53.273Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T20:13:53.274Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T20:13:53.287Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T20:14:08.964Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:14:18.900Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:14:28.771Z] ❌ DisTube play error:
+This url is not supported
+[2026-03-27T20:14:29.318Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:14:43.059Z] ℹ️  ➕ Thêm vào queue: KHÔNG BUÔNG - HNGLE FT AIRI - HOODTRAP
+[2026-03-27T20:14:43.882Z] ❌ 🎵 DisTube Error:
+[2026-03-27T20:14:43.887Z] ❌ unhandledRejection:
+TypeError: channel.send is not a function
+    at DisTube.<anonymous> (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\index.js:54:21)
+    at DisTube.emit (node:events:508:20)
+    at DisTube.emitError (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:2546:10)
+    at QueueManager.emitError (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:154:18)
+    at #handlePlayingError (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:2100:10)
+    at QueueManager.playSong (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:2147:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DisTube.play (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:2352:24)
+    at async handlePlayMusic (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\commands\study.js:389:13)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\commands\study.js:81:21)
+[2026-03-27T20:14:44.406Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:16:08.411Z] ℹ️  🎵 Pomodoro end: Cleanup queue...
+[2026-03-27T20:16:28.631Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T20:16:28.632Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T20:16:29.192Z] ❌ ❌ Lỗi kết nối MongoDB:
+Cannot overwrite `DailyStats` model once compiled.
+[2026-03-27T20:16:29.192Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T20:16:34.195Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T20:16:34.276Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T20:16:34.277Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T20:16:34.281Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T20:16:34.281Z] ℹ️  ✅ Đã load Events
+[2026-03-27T20:16:35.661Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T20:16:35.663Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T20:16:35.667Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T20:16:49.345Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:16:59.785Z] ❌ DisTube play error:
+Cannot find any song with this query (không buông)
+[2026-03-27T20:17:00.516Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:17:32.538Z] ❌ DisTube play error:
+This url is not supported
+[2026-03-27T20:17:33.096Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:18:48.673Z] ℹ️  🎵 Pomodoro end: Cleanup queue...
+[2026-03-27T20:20:57.075Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:21:10.884Z] ℹ️  ➕ Thêm vào queue: Never Gonna Give You Up
+[2026-03-27T20:21:11.852Z] ❌ 🎵 DisTube Error:
+PlayingError: Error: Cannot find module '@discordjs/opus'
+Require stack:
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\util\loader.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\opus\Opus.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\opus\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\@discordjs\voice\dist\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\index.js
+Error: Cannot find module 'node-opus'
+Require stack:
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\util\loader.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\opus\Opus.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\opus\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\@discordjs\voice\dist\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\index.js
+Error: Cannot find module 'opusscript'
+Require stack:
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\util\loader.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\opus\Opus.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\opus\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\@discordjs\voice\dist\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\index.js
+    at Object.loader [as require] (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\util\loader.js:12:9)
+    at loadOpus (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\opus\Opus.js:17:17)
+    at new OpusStream (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\opus\Opus.js:46:10)
+    at new Encoder (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\prism-media\src\opus\Opus.js:149:5)
+    at Object.transformer (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\@discordjs\voice\dist\index.js:2795:47)
+    at C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\@discordjs\voice\dist\index.js:3024:58
+    at Array.map (<anonymous>)
+    at createAudioResource (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\@discordjs\voice\dist\index.js:3024:39)
+    at new DisTubeStream (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:1846:64)
+    at QueueManager.playSong (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:2140:24)
+[2026-03-27T20:21:12.476Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:21:31.711Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T20:21:31.712Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T20:21:32.285Z] ❌ ❌ Lỗi kết nối MongoDB:
+Cannot overwrite `DailyStats` model once compiled.
+[2026-03-27T20:21:32.286Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T20:21:37.291Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T20:21:37.365Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-27T20:21:37.365Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T20:21:37.368Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T20:21:37.369Z] ℹ️  ✅ Đã load Events
+[2026-03-27T20:21:38.720Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T20:21:38.721Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T20:21:38.725Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T20:21:44.560Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:22:11.972Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:22:21.536Z] ℹ️  ➕ Thêm vào queue: Never Gonna Give You Up
+[2026-03-27T20:22:22.406Z] ℹ️  🎵 Đang phát: Never Gonna Give You Up - Rick Astley
+[2026-03-27T20:22:22.887Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:22:43.905Z] ℹ️  🎵 Dừng phát nhạc và cleanup queue...
+[2026-03-27T20:22:45.295Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:41:16.794Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T20:41:16.795Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T20:41:17.330Z] ❌ ❌ Lỗi kết nối MongoDB:
+Cannot overwrite `DailyStats` model once compiled.
+[2026-03-27T20:41:17.330Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T20:41:22.339Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T20:41:22.421Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-27T20:41:22.423Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T20:41:22.428Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T20:41:22.429Z] ℹ️  ✅ Đã load Events
+[2026-03-27T20:41:24.151Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T20:41:24.152Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T20:41:24.157Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T20:45:31.002Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:45:55.880Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:49:54.846Z] ℹ️  🧠 AI Council (handleStudyAsk) đã được gắn vào client
+[2026-03-27T20:49:54.847Z] ℹ️  📊 StatsCollector initialized
+[2026-03-27T20:49:54.847Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-27T20:49:55.390Z] ❌ ❌ Lỗi kết nối MongoDB:
+Cannot overwrite `DailyStats` model once compiled.
+[2026-03-27T20:49:55.391Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-27T20:50:00.402Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-27T20:50:00.449Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-27T20:50:00.450Z] ℹ️  ✅ Đã load Commands
+[2026-03-27T20:50:00.455Z] ℹ️  ✅ Loaded 5 events
+[2026-03-27T20:50:00.455Z] ℹ️  ✅ Đã load Events
+[2026-03-27T20:50:02.199Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-27T20:50:02.199Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-27T20:50:02.204Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-27T20:50:38.719Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:50:58.096Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:52:02.900Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T20:54:36.502Z] ℹ️  Command executed: study by nguyenminh.2608
+[2026-03-27T23:14:30.475Z] ℹ️  ✅ Loaded command: study
+[2026-03-27T23:14:31.058Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-27T23:14:31.170Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-27T23:14:44.423Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T23:15:07.391Z] ℹ️  🧠 [AI Council] nguynquminhh hỏi: "jquery..."
+[2026-03-27T23:15:11.799Z] ❌ ❌ [AI Council] API Error for nguynquminhh:
+Request failed with status code 500
+[2026-03-27T23:15:12.454Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-27T23:15:38.664Z] ℹ️  Command executed: study by nguynquminhh

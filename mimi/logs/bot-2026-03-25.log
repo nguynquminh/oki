@@ -1,0 +1,11 @@
+[2026-03-25T03:59:21.432Z] ℹ️  📊 StatsCollector initialized
+[2026-03-25T03:59:21.434Z] ℹ️  ✅ SQLite connected: C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\database\data\mimi.db
+[2026-03-25T03:59:21.435Z] ℹ️  ✅ Đã kết nối MongoDB
+[2026-03-25T03:59:21.617Z] ℹ️  ✅ Loaded 17 commands
+[2026-03-25T03:59:21.618Z] ℹ️  ✅ Đã load Commands
+[2026-03-25T03:59:21.620Z] ℹ️  ✅ Loaded 5 events
+[2026-03-25T03:59:21.621Z] ℹ️  ✅ Đã load Events
+[2026-03-25T03:59:23.222Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-25T03:59:23.223Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-25T03:59:23.228Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-25T03:59:30.354Z] ℹ️  Command executed: ticketsetup by nguynquminhh

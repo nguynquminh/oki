@@ -1,0 +1,682 @@
+[
+  {
+    "id": 1,
+    "name": "Xanh II Giáp phép",
+    "stats": [
+      "Giáp phép +5.6"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Xanh I Hồi chiêu",
+    "stats": [
+      "Giảm hồi chiêu +0.3%"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Xanh II Hồi chiêu",
+    "stats": [
+      "Giảm hồi chiêu +0.6%"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Xanh III Giáp phép",
+    "stats": [
+      "Giáp phép +9"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Xanh III Giảm hồi chiêu",
+    "stats": [
+      "Giảm hồi chiêu +1%"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Xanh I Giáp",
+    "stats": [
+      "Giáp +2.7"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Xanh II Giáp",
+    "stats": [
+      "Giáp +5.6"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Xanh III Giáp",
+    "stats": [
+      "Giáp +9"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Xanh I Giáp phép",
+    "stats": []
+  },
+  {
+    "id": 10,
+    "name": "Xanh I Máu/Hồi chiêu",
+    "stats": []
+  },
+  {
+    "id": 11,
+    "name": "Xanh I Giáp/Giáp phép/Hồi chiêu",
+    "stats": [
+      "Giáp +0.8",
+      "Giáp phép +0.8",
+      "Giảm hồi chiêu +0.2%"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Xanh II Giáp/Giáp phép/Hồi chiêu",
+    "stats": [
+      "Giáp +1.7",
+      "Giáp phép +1.7",
+      "Giảm hồi chiêu +0.4%"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Xanh III Giáp/Giáp phép/Hồi chiêu",
+    "stats": [
+      "Giáp +2.7",
+      "Giáp phép +2.7",
+      "Giảm hồi chiêu +0.6%"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Xanh III Tốc đánh/Xuyên giáp phép",
+    "stats": [
+      "Tốc đánh +0.6%",
+      "Xuyên giáp phép +6.4"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Xanh II Tốc đánh/Xuyên giáp phép",
+    "stats": [
+      "Xuyên giáp phép +4",
+      "Tốc đánh +0.4%"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Xanh I Công vật lý/Xuyên giáp",
+    "stats": [
+      "Công vật lý +0.3",
+      "Xuyên giáp +1.9"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Xanh III Công vật lý/Xuyên giáp",
+    "stats": [
+      "Công vật lý +0.9",
+      "Xuyên giáp +6.4"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Xanh I Hút phép/Giáp",
+    "stats": [
+      "Giáp +1.8",
+      "Hút máu phép +0.2%"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Xanh II Hút phép/Giáp",
+    "stats": [
+      "Giáp +3.7",
+      "Hút máu phép +0.4%"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Xanh II Công vật lý/Xuyên giáp",
+    "stats": [
+      "Công vật lý +0.6",
+      "Xuyên giáp +4"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Xanh III Hút máu phép/Giáp",
+    "stats": [
+      "Hút máu phép +0.7%",
+      "Giáp +5.9"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Xanh I Công phép/Hồi chiêu",
+    "stats": [
+      "Công phép +0.7",
+      "Giảm hồi chiêu +0.2%"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Xanh II Công phép/Hồi chiêu",
+    "stats": [
+      "Công phép +1.5",
+      "Giảm hồi chiêu +0.4%"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Xanh III Công phép/Giảm hồi chiêu",
+    "stats": [
+      "Công phép +2.4",
+      "Giảm hồi chiêu +0.7%"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Xanh I Tốc đánh/Xuyên giáp phép",
+    "stats": [
+      "Xuyên giáp +1.9",
+      "Tốc đánh +0.2%"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Xanh II Máu/Hồi chiêu",
+    "stats": [
+      "Máu tối đa +23.4",
+      "Giảm hồi chiêu +0.4%"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Xanh III Máu tối đa/Giám hồi chiêu",
+    "stats": [
+      "Máu tối đa +37.5",
+      "Giảm hồi chiêu +0.6%"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Xanh I Giáp/Giáp phép",
+    "stats": [
+      "Giáp +1.5",
+      "Giáp phép +1.5"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Xanh II Giáp/Giáp phép",
+    "stats": [
+      "Giáp +3.1",
+      "Giáp phép 3.1"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Xanh III Giáp/Giáp phép",
+    "stats": [
+      "Giáp +5",
+      "Giáp phép +5"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Tím III Tốc đánh/Tốc chạy",
+    "stats": [
+      "Tốc đánh +1%",
+      "Tốc chạy +1%"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Tím I Tốc đánh/chạy",
+    "stats": [
+      "Tốc chạy +0.3%",
+      "Tốc đánh +0.3%"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Tím III Máu tối đa/Hồi máu",
+    "stats": [
+      "Máu tối đa +60",
+      "Hồi máu/5s +4.5"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Tím III Máu/Hồi máu/Tốc chạy",
+    "stats": [
+      "Máu tối đa +45",
+      "Hồi máu/5s +5.2",
+      "Tốc chạy +0.4%"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Tím II Máu/Hồi máu",
+    "stats": [
+      "Máu tối đa +37.5",
+      "Hồi máu/5s +2.8"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Tím I Tỷ lệ chí mạng/Máu",
+    "stats": [
+      "Máu tối đa +18",
+      "Tỷ lệ chí mạng +0.2%"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Tím I Máu/Hồi máu",
+    "stats": [
+      "Máu tối đa +18",
+      "Hồi máu/5s +1.4"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Tím I Máu/Hồi máu/Tốc chạy",
+    "stats": [
+      "Máu tối đa +13.5",
+      "Tốc chạy +0.1%",
+      "Hồi máu/5s +1.6"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Tím III Hút máu/Thủ phép",
+    "stats": [
+      "Hút máu +1%",
+      "Giáp phép +4.1"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Tím II Hút máu/Giáp phép",
+    "stats": [
+      "Giáp phép +4.1",
+      "Hút máu +1%"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Tím I Hút máu/Giáp phép",
+    "stats": [
+      "Giáp phép +1.2",
+      "Hút máu +0.3%"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Tím III Công vật lý/Tốc chạy",
+    "stats": [
+      "Công vật lý +1.6",
+      "Tốc chạy +1%"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Tím I Công vật lý/Tốc chạy",
+    "stats": [
+      "Công vật lý +0.5",
+      "Tốc chạy +0.3%"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Tím III Công phép/Hút máu phép",
+    "stats": [
+      "Công phép +2.4",
+      "Hút máu phép +1%"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Tím II Công/Hút máu phép",
+    "stats": [
+      "Công phép +1.5",
+      "Hút máu phép +0.6%"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Tím I Công/Hút máu phép",
+    "stats": [
+      "Công phép +0.7",
+      "Hút máu phép +0.3%"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Tím I Máu",
+    "stats": [
+      "Máu tối đa +22.5"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Tím II Hút máu phép",
+    "stats": [
+      "Hút máu phép +1%"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Tím I Hút máu phép",
+    "stats": [
+      "Hút máu phép +0.5%"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Tím I Hút máu",
+    "stats": [
+      "Hút máu +0.5%"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Tím III Hút máu phép",
+    "stats": [
+      "Hút máu phép +1.6%"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Tím III Máu tối đa",
+    "stats": [
+      "Máu tối đa +75"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Tím II Tốc đánh/Chạy",
+    "stats": [
+      "Tốc đánh +0.6%",
+      "Tốc chạy +0.6%"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Tím II Máu/Hồi máu/Tốc chạy",
+    "stats": [
+      "Máu tối đa +28.1",
+      "Hồi máu/5s +3.3",
+      "Tốc chạy +0.3%"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Tím II Hút máu",
+    "stats": [
+      "Hút máu +1%"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Tím II Tỷ lệ chí mạng/Máu",
+    "stats": [
+      "Máu tối đa +37.5",
+      "Tỷ lệ chí mạng +0.3%"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Tím II Công vật lý/Tốc chạy",
+    "stats": [
+      "Công vật lý +1",
+      "Tốc chạy +0.6%"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Tím II Máu tối đa",
+    "stats": [
+      "Máu tối đa +46.9"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Đỏ III Công phép",
+    "stats": [
+      "Công phép +5.3"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Đỏ III Công Vật lý",
+    "stats": [
+      "Công vật lý +3.2"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Đỏ III Công vật lý/Xuyên giáp",
+    "stats": [
+      "Công vật lý +2",
+      "Xuyên giáp +3.6"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Đỏ III Công vật lý/Hút máu",
+    "stats": [
+      "Công vậy lý +2.5",
+      "Hút máu +0.5%"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Đỏ III Tỉ lệ chí mạng/Sát thương chí mạng",
+    "stats": [
+      "Tỷ lệ chí mạng +0.7%",
+      "Sát thương chí mạng +3.6%"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Đỏ III Công phép/Xuyên thủ phép",
+    "stats": [
+      "Công phép +4.2",
+      "Xuyên giáp phép +2.4"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Đỏ III Công phép/Tốc đánh",
+    "stats": [
+      "Công phép +4.2",
+      "Tốc đánh +0.6%"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Đỏ III Tỉ lệ chí mạng",
+    "stats": [
+      "Tỷ lệ chí mạng +1.6%"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Đỏ III Tốc đánh/Tỉ lệ chí mạng",
+    "stats": [
+      "Tốc đánh +1.6%",
+      "Tỷ lệ chí mạng +0.5%"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Đỏ II Công vật lý/Xuyên giáp",
+    "stats": [
+      "Công vật lý +1.3",
+      "Xuyên giáp +2.3"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Đỏ II Công vật lý",
+    "stats": [
+      "Công vật lý +2"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Đỏ II Tốc đánh/Tỷ lệ chí mạng",
+    "stats": [
+      "Tốc đánh +1%",
+      "Tỷ lệ chí mạng +0.3%"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Đỏ II Công phép/Xuyên giáp phép",
+    "stats": [
+      "Công phép +2.6",
+      "Xuyên giáp phép +1.5%"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Đỏ II Công phép",
+    "stats": [
+      "Công phép +3.3"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Đỏ II Tỉ lệ chí mạng1",
+    "stats": [
+      "Tỷ lệ chí mạng +1%"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Đỏ II Tỉ lệ chí mạng/Sát thương chí mạng",
+    "stats": [
+      "Tỷ lệ chí mạng +0.4%",
+      "Sát thương chí mạng +2.3%"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Đỏ II Công phép/Tốc đánh",
+    "stats": [
+      "Công phép +2.6",
+      "Tốc đánh +0.4%"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Đỏ II Công vật lý/Hút máu",
+    "stats": [
+      "Công vật lý +1.6",
+      "Hút máu +0.3%"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Đỏ II Tốc đánh/Máu/Giáp",
+    "stats": [
+      "Tốc đánh +0.6%",
+      "Máu tối đa +21.1",
+      "Giáp +1.4"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Đỏ III Tốc đánh/Máu/Giáp",
+    "stats": [
+      "Tốc đánh +1%",
+      "Máu tối đa +33.7",
+      "Giáp +2.3"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "ĐỎ I TỐC ĐÁNH/TỶ LỆ CHÍ MẠNG",
+    "stats": [
+      "Tỷ lệ chí mạng +0.2%",
+      "Tốc đánh +0.5%"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "ĐỎ I TỶ LỆ CHÍ MẠNG",
+    "stats": [
+      "Tỷ lệ chí mạng +0.5%"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "ĐỎ I CÔNG PHÉP/TỐC ĐÁNH",
+    "stats": [
+      "Công phép +1.3",
+      "Tốc đánh +0.2%"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "ĐỎ I CÔNG/XUYÊN GIÁP PHÉP",
+    "stats": [
+      "Công phép +1.3",
+      "Xuyên giáp phép +0.7"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "ĐỎ I TỐC ĐÁNH/MÁU/GIÁP",
+    "stats": [
+      "Giáp +0.7",
+      "Máu tối đa +10.1",
+      "Tốc đánh +0.3%"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "ĐỎ I TỶ LỆ/SÁT THƯƠNG CHÍ MẠNG",
+    "stats": [
+      "Tỷ lệ chí mạng +0.2%",
+      "Sát thương chí mạng +1.1%"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "ĐỎ I CÔNG VẬT LÝ/HÚT MÁU",
+    "stats": [
+      "Công vật lý +0.8",
+      "Hút máu +0.2%"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "ĐỎ I CÔNG VẬT LÝ/XUYÊN GIÁP",
+    "stats": [
+      "Công vật lý +0.6",
+      "Xuyên giáp +1.1"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "ĐỎ I CÔNG VẬT LÝ",
+    "stats": [
+      "Công vật lý +1"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "ĐỎ I CÔNG PHÉP",
+    "stats": []
+  }
+]

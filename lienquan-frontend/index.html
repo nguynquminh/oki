@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- SEO & UX Enhancements -->
+    <meta name="description" content="Danh mục Portfolio cá nhân hiện đại với giao diện tuyệt đẹp." />
+    <!-- Theme color changed to match the ui-ux-pro-max dark neutral background -->
+    <meta name="theme-color" content="#18181b" /> 
+    <meta property="og:title" content="Portfolio | Modern UI" />
+    <meta property="og:description" content="Danh mục Portfolio cá nhân với giao diện hiện đại và hiệu ứng mượt mà." />
+    <meta property="og:type" content="website" />
+    
+    <title>Portfolio | Sáng tạo & Hiện đại</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ui-ux-pro-max Typography: Archivo & Space Grotesk -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Inline CSS: ui-ux-pro-max style (Glassmorphism, High-end Portfolio) -->
+    <style>
+      body {
+        margin: 0;
+        /* Master Color Strategy: Neutral background */
+        background-color: #18181b; /* Zinc 900 */
+        color: #ffffff;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      /* Global Loader Container */
+      #global-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #18181b;
+        z-index: 99999;
+        overflow: hidden;
+      }
+
+      /* Light source / depth as recommended in Glassmorphism style */
+      .bg-glow {
+        position: absolute;
+        width: 60vw;
+        height: 60vw;
+        max-width: 600px;
+        max-height: 600px;
+        background: radial-gradient(circle, rgba(236, 72, 153, 0.12) 0%, rgba(24, 24, 27, 0) 70%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        animation: pulse-glow 4s ease-in-out infinite alternate;
+      }
+
+      /* Glassmorphism Card Container */
+      .glass-card {
+        position: relative;
+        padding: 40px 60px;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        z-index: 10;
+      }
+
+      /* Light reflection pseudo-element */
+      .glass-card::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; height: 1px;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+        border-radius: 24px 24px 0 0;
+      }
+
+      /* Spinner */
+      .spinner {
+        width: 48px;
+        height: 48px;
+        border: 3px solid rgba(236, 72, 153, 0.1);
+        border-left-color: #ec4899;
+        border-radius: 50%;
+        animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+      }
+
+      /* High contrast loader text (ui-ux-pro-max accessibility) */
+      .loader-text {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #f4f4f5; /* Zinc 100 for stark contrast */
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+        50% { opacity: 0.6; text-shadow: none; }
+      }
+
+      @keyframes pulse-glow {
+        0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+        100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+      }
+
+      /* Accessibility: prefers-reduced-motion respected */
+      @media (prefers-reduced-motion: reduce) {
+        .spinner { animation: none; border-color: #ec4899; }
+        .loader-text, .bg-glow { animation: none; opacity: 1; text-shadow: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Loading UI: Tự động xóa khi React Render xong -->
+      <div id="global-loader">
+        <div class="bg-glow"></div>
+        <div class="glass-card">
+          <div class="spinner"></div>
+          <div class="loader-text">Đang tải...</div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

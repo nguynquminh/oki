@@ -1,0 +1,350 @@
+[
+  {
+    "id": 1,
+    "name": "Thành khởi nguyên",
+    "description": [
+      "Thích hợp: Tất cả các dạng tướng",
+      "Có năng lực sáng tạo và khoa học kỹ thuật bậc nhất."
+    ],
+    "groups": [
+      {
+        "group_id": "group1",
+        "skills": [
+          {
+            "name": "Quả cầu băng sương",
+            "type": "Kích hoạt",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/icon-badge.png",
+            "description": [
+              "Sau khi trận đấu bắt đầu 4 phút, bạn sẽ nhận được Quả cầu băng sương. Sau khi sử dụng sẽ được miễn sát thương nhưng không thể công kích, di chuyển và khi kết thúc sẽ nhận được lá chắn, chỉ dùng 1 lần."
+            ]
+          },
+          {
+            "name": "Siêu hồi máu",
+            "type": "Bảo mệnh",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_10105.png",
+            "description": [
+              "Đổi Hồi máu thành Siêu hồi máu, giúp hồi nhiều máu và năng lượng hơn."
+            ]
+          },
+          {
+            "name": "Mật ngữ",
+            "type": "Giảm hồi chiêu",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_10106.png",
+            "description": [
+              "Phụ trợ giảm hồi chiêu."
+            ]
+          }
+        ]
+      },
+      {
+        "group_id": "group2",
+        "skills": [
+          {
+            "name": "Uy áp",
+            "type": "Dọn lính",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/icon-badge-2.png",
+            "description": [
+              "Sau khi tung chiêu hoặc đòn đánh thường vào lính, lính sẽ bị diệt."
+            ]
+          },
+          {
+            "name": "Thợ săn",
+            "type": "Hạ giúp tăng sát thương",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_10202.png",
+            "description": [
+              "Mỗi lần hạ hoặc phụ hạ tướng địch sẽ nhận cộng dồn vật lý và công phép."
+            ]
+          }
+        ]
+      },
+      {
+        "group_id": "group3",
+        "skills": [
+          {
+            "name": "Chuyển sinh",
+            "type": "Đầu thai",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_10302.png",
+            "description": [
+              "Sau khi tử vong sẽ nhận được phù hiệu “Hồi sinh”. Sau khi sử dụng sẽ giúp hồi sinh trong tế đàn. Thời gian hồi chiêu của “Hồi sinh” mỗi lần sẽ tăng lên."
+            ]
+          },
+          {
+            "name": "Luyện kim",
+            "type": "Phát triển",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_10301.png",
+            "description": [
+              "Chiêu/Đánh thường trúng tướng địch hoặc trụ sẽ được nhân thêm vàng, liên tiếp đánh trúng sẽ nhận thêm lợi ích."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Tháp quang minh",
+    "description": [
+      "Thích hợp: Xạ thủ, Pháp sư",
+      "Đã trải qua Thánh quang tẩy lễ"
+    ],
+    "groups": [
+      {
+        "group_id": "group1",
+        "skills": [
+          {
+            "name": "Tương phản",
+            "type": "Hồi chiêu",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_20101.png",
+            "description": [
+              "Sát thương gây ra cho tướng địch được tăng nhưng sát thương phải chịu cũng tăng lên."
+            ]
+          },
+          {
+            "name": "Sung mãn",
+            "type": "Hồi năng lượng",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_20102.png",
+            "description": [
+              "Tung chiêu hoặc đánh thường trúng tướng địch sẽ được hồi tỷ lệ năng lượng tối đa."
+            ]
+          },
+          {
+            "name": "Thánh châu",
+            "type": "Tăng sát thương",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_20103.png",
+            "description": [
+              "Chiêu cuối được giảm thời gian hồi chiêu thêm 10% (nhưng không được vượt quá 40% tối đa)"
+            ]
+          }
+        ]
+      },
+      {
+        "group_id": "group2",
+        "skills": [
+          {
+            "name": "Xuyên tâm",
+            "type": "Xuyên",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_20202.png",
+            "description": [
+              "Nhận thêm xuyên giáp và xuyên giáp phép mỗi cấp."
+            ]
+          },
+          {
+            "name": "Bí quyết",
+            "type": "Tăng sát thương chí mạng",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_20201.png",
+            "description": [
+              "Nhận được thêm chí mạng và công phép từ trang bị."
+            ]
+          }
+        ]
+      },
+      {
+        "group_id": "group3",
+        "skills": [
+          {
+            "name": "Thánh thuẫn",
+            "type": "Phòng ngự",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_20303.png",
+            "description": [
+              "Sau khi chịu sát thương sẽ nhận được lá chắn và hút máu phép."
+            ]
+          },
+          {
+            "name": "Thần quang",
+            "type": "Tăng sát thương",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_20302.png",
+            "description": [
+              "Tung chiêu hoặc đánh thường lần đầu tiên trúng tướng địch sẽ tạo thành sát thương sấm sét."
+            ]
+          },
+          {
+            "name": "Tinh linh",
+            "type": "Tăng sát thương",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_20301.png",
+            "description": [
+              "Đòn đánh thường thứ 3 liên tiếp trúng một tướng địch sẽ nhận được một vòng sát tiểu thiên thần quanh cơ thể. Tiểu thiên thần sẽ tự động công kích kẻ địch."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Vực hỗn mang",
+    "description": [
+      "Thích hợp: Đấu sỹ, Sát thủ",
+      "Gồm các lĩnh chủ Vực hỗn mang"
+    ],
+    "groups": [
+      {
+        "group_id": "group1",
+        "skills": [
+          {
+            "name": "Ma hỏa",
+            "type": "Tăng sát thương",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_30104.png",
+            "description": [
+              "Đánh thường và tung chiêu sẽ gây thêm sát thương lên tướng địch."
+            ]
+          },
+          {
+            "name": "Dư ảnh",
+            "type": "Lướt tăng sát thương",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_30102.png",
+            "description": [
+              "Mỗi khi dùng lướt sẽ nhận cộng dồn trong 2 giây, tối đa 3 cộng dồn Dư ảnh. Đòn đánh thường sau đó sẽ tiêu hao toàn bộ Dư ảnh để gây sát thương."
+            ]
+          },
+          {
+            "name": "Hấp huyết",
+            "type": "Hồi phục",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_30101.png",
+            "description": [
+              "Hạ hoặc phụ hạ sẽ được hồi máu đã mất và năng lượng."
+            ]
+          }
+        ]
+      },
+      {
+        "group_id": "group2",
+        "skills": [
+          {
+            "name": "Cố thủ",
+            "type": "Kháng hiệu ứng",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_30202.png",
+            "description": [
+              "Nhận thêm kháng hiệu ứng."
+            ]
+          },
+          {
+            "name": "Cường công",
+            "type": "Tăng sát thương",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_30201.png",
+            "description": [
+              "Nhận thêm công vật lý và công phép."
+            ]
+          }
+        ]
+      },
+      {
+        "group_id": "group3",
+        "skills": [
+          {
+            "name": "Ma tính",
+            "type": "Giảm hồi chiêu",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_30304.png",
+            "description": [
+              "Sau khi tung chiêu cuối, lập tức giảm mạnh thời gian hồi các chiêu khác. Hạ hoặc phụ hạ sẽ kéo dài thời gian hiệu ứng."
+            ]
+          },
+          {
+            "name": "Ma chú",
+            "type": "Sát thương chí mạng",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_30302.png",
+            "description": [
+              "Tung chiêu hoặc đánh thường trúng tướng địch sẽ cộng dồn dấu ấn. Cộng dồn đủ 3 ấn sẽ lập tức gây sát thương phép."
+            ]
+          },
+          {
+            "name": "Đấu khí",
+            "type": "Sát thương kéo dài",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_30301.png",
+            "description": [
+              "Gây sát thương lên tướng địch sẽ cộng dồn. Đủ 10 cộng dồn sẽ kích hoạt giúp bản thân hồi máu và tăng xuyên giáp."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Rừng nguyên sinh",
+    "description": [
+      "Thích hợp: Hỗ trợ, Đỡ đòn",
+      "Được bảo vệ bởi sức mạnh rừng sâu"
+    ],
+    "groups": [
+      {
+        "group_id": "group1",
+        "skills": [
+          {
+            "name": "Canh gác",
+            "type": "Phòng ngự",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_40103.png",
+            "description": [
+              "Khi đứng gần trụ, bản thân sẽ được nhận kháng hiệu ứng và miễn thương"
+            ]
+          },
+          {
+            "name": "Ám kích",
+            "type": "Tăng sát thương",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_40102.png",
+            "description": [
+              "Ở trong bụi cỏ tung đòn đánh thường sẽ cộng thêm sát thương chuẩn"
+            ]
+          },
+          {
+            "name": "Nhạy bén",
+            "type": "Chạy sông",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_40101.png",
+            "description": [
+              "Sau khi tử vong sẽ nhận được phù hiệu “Hồi sinh”. Sau khi sử dụng sẽ hồi sinh trong tế đàn. “Hồi sinh” càng về sau càng tăng thêm thời gian hồi chiêu."
+            ]
+          }
+        ]
+      },
+      {
+        "group_id": "group2",
+        "skills": [
+          {
+            "name": "Sinh tồn",
+            "type": "Lượng máu",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_40202.png",
+            "description": [
+              "Chiêu/Đánh thường trúng tướng địch hoặc trụ sẽ được nhân thêm vàng, liên tiếp đánh trúng sẽ nhận thêm lợi ích."
+            ]
+          },
+          {
+            "name": "Bơm máu",
+            "type": "Hồi máu",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_40201.png",
+            "description": [
+              "Hiệu quả hồi máu và lá chắn của bản thân tăng thêm"
+            ]
+          }
+        ]
+      },
+      {
+        "group_id": "group3",
+        "skills": [
+          {
+            "name": "Du hiệp",
+            "type": "Giao tranh",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_40307.png",
+            "description": [
+              "Rời khỏi giao tranh, đòn đánh thường kế tiếp sẽ giảm sát thương địch và làm chậm địch"
+            ]
+          },
+          {
+            "name": "Mộc giáp",
+            "type": "Phòng ngự",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_40306.png",
+            "description": [
+              "Gánh chịu sát thương sẽ cộng dồn, đủ lần sẽ gây nổ sát thương phép và hồi máu nếu đánh trúng tướng"
+            ]
+          },
+          {
+            "name": "Trói buộc",
+            "type": "Sát thương khống chế",
+            "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/mowen_40303.png",
+            "description": [
+              "Khi tung chiêu khống chế trúng tướng địch sẽ giúp bản thân tăng giáp và giáp phép, đồng thời nhận hiệu quả thiêu đốt tính theo tỷ lệ lượng máu tối đa"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

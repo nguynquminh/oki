@@ -1,0 +1,388 @@
+[2026-03-29T03:19:30.215Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T03:19:30.218Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T03:19:30.875Z] ❌ ❌ Lỗi kết nối MongoDB:
+Cannot overwrite `DailyStats` model once compiled.
+[2026-03-29T03:19:30.876Z] ℹ️  [MongoDB] Retry kết nối sau 5 giây...
+[2026-03-29T03:19:35.876Z] ℹ️  ✅ Retry kết nối thành công!
+[2026-03-29T03:19:35.936Z] ℹ️  ✅ Loaded 18 commands
+[2026-03-29T03:19:35.938Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T03:19:35.940Z] ℹ️  ✅ Loaded 5 events
+[2026-03-29T03:19:35.941Z] ℹ️  ✅ Đã load Events
+[2026-03-29T03:19:37.428Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T03:19:37.429Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T03:19:37.436Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T03:21:40.195Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-29T03:21:59.881Z] ℹ️  ➕ Thêm vào queue: Wrong Times ( full ) - puppy & @Dangrangto
+[2026-03-29T03:22:00.820Z] ❌ 🎵 DisTube Error:
+DisTubeError [SOUNDCLOUD_PLUGIN_RATE_LIMITED]: Reached SoundCloud rate limits
+See more: https://developers.soundcloud.com/docs/api/rate-limits#play-requests
+    at SoundCloudPlugin.getStreamURL (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\@distube\soundcloud\dist\index.js:127:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DisTubeHandler.attachStreamInfo (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:1632:25)
+    at async QueueManager.playSong (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:2123:7)
+    at async DisTube.play (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\node_modules\distube\dist\index.js:2352:24)
+    at async handlePlayMusic (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\commands\study.js:392:13)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\commands\study.js:88:21)
+    at async Object.execute (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\messageCreate.js:37:17)
+[2026-03-29T03:22:01.343Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-29T03:23:28.049Z] ❌ DisTube play error:
+This url is not supported
+[2026-03-29T03:23:28.551Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-29T03:31:38.686Z] ℹ️  🎵 Dừng phát nhạc và cleanup queue...
+[2026-03-29T03:31:39.879Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-29T03:32:12.625Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-29T03:32:19.517Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-29T03:32:32.137Z] ❌ DisTube play error:
+This url is not supported
+[2026-03-29T03:32:32.649Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-29T03:32:50.439Z] ℹ️  ➕ Thêm vào queue: Stephanie Poetri - I Love You 3000
+[2026-03-29T03:32:51.360Z] ℹ️  🎵 Đang phát: Stephanie Poetri - I Love You 3000 - Music Beat
+[2026-03-29T03:32:51.917Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-29T03:36:12.323Z] ℹ️  ✅ Hết danh sách phát
+[2026-03-29T04:02:28.187Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:02:28.187Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:02:28.188Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:02:29.033Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:02:29.094Z] ❌ Failed to load command study.js:
+Error: Cannot find module '../models/StudyModel'
+Require stack:
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\commands\study.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\handlers\commandHandler.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at require (node:internal/modules/helpers:191:16)
+    at Object.<anonymous> (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\commands\study.js:7:20)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+[2026-03-29T04:02:29.097Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:02:29.098Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:02:29.098Z] ❌ ❌ Lỗi khởi động bot:
+loadEvents is not a function
+[2026-03-29T04:03:09.314Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:03:09.315Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:03:09.315Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:03:09.995Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:03:10.049Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:03:10.050Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:03:10.050Z] ❌ ❌ Lỗi khởi động bot:
+loadEvents is not a function
+[2026-03-29T04:07:06.723Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:07:06.723Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:07:06.724Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:07:07.575Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:07:07.630Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:07:07.631Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:07:07.634Z] ℹ️  ✅ Loaded 5 events
+[2026-03-29T04:07:07.634Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:07:09.721Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:07:09.722Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:07:09.726Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:07:40.614Z] ℹ️  Command executed: study by nguynquminhh
+[2026-03-29T04:07:58.641Z] ℹ️  [Event] nguynquminhh khởi tạo event ae6sNT3vDWiA tại guild 1402502459871596667
+[2026-03-29T04:07:59.382Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:13:25.762Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:13:25.762Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:13:25.763Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:13:27.577Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:13:27.632Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:13:27.633Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:13:27.636Z] ℹ️  ✅ Loaded 5 events
+[2026-03-29T04:13:27.636Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:13:29.454Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:13:29.454Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:13:29.461Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:13:38.494Z] ℹ️  [Event] nguynquminhh khởi tạo event iP2MlMU_8TSw tại guild 1402502459871596667
+[2026-03-29T04:13:39.218Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:14:16.522Z] ℹ️  ✅ Loaded command: event
+[2026-03-29T04:14:17.205Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-29T04:14:17.309Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-29T04:14:19.094Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:14:25.154Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:14:42.180Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:15:43.806Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:15:43.807Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:15:43.808Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:15:44.839Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:15:44.890Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:15:44.890Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:15:44.892Z] ❌ Failed to load event C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\eventInteraction.js:
+Error: Cannot find module '../services/channelService'
+Require stack:
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\eventInteraction.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\handlers\eventHandler.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at require (node:internal/modules/helpers:191:16)
+    at Object.<anonymous> (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\eventInteraction.js:15:24)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+[2026-03-29T04:15:44.895Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T04:15:44.896Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:15:46.343Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:15:46.344Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:15:46.350Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:17:29.747Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:17:29.747Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:17:29.748Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:17:30.766Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:17:30.818Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:17:30.819Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:17:30.970Z] ❌ Failed to load event C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\eventInteraction.js:
+Error: Cannot find module '../utils/helpers'
+Require stack:
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\eventInteraction.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\handlers\eventHandler.js
+- C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at require (node:internal/modules/helpers:191:16)
+    at Object.<anonymous> (C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\events\eventInteraction.js:17:59)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+[2026-03-29T04:17:30.974Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T04:17:30.975Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:17:32.506Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:17:32.506Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:17:32.511Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:18:25.874Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:18:25.874Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:18:25.875Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:18:26.850Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:18:26.901Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:18:26.902Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:18:27.048Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T04:18:27.048Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:18:28.416Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:18:28.416Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:18:28.421Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:18:36.366Z] ℹ️  [Event] nguynquminhh khởi tạo event Fz28IXeZHOXO tại guild 1402502459871596667
+[2026-03-29T04:18:36.992Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:23:01.444Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:23:01.445Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:23:01.446Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:23:02.442Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:23:02.500Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:23:02.501Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:23:02.641Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T04:23:02.642Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:23:04.322Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:23:04.323Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:23:04.328Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:23:07.063Z] ℹ️  [Event] nguynquminhh khởi tạo event CcP7rALqVMaj tại guild 1402502459871596667
+[2026-03-29T04:23:07.814Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:25:42.540Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:25:42.541Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:25:42.541Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:25:43.475Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:25:43.530Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:25:43.531Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:25:43.682Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T04:25:43.683Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:25:45.583Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:25:45.584Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:25:45.589Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:25:50.846Z] ℹ️  [Event] nguynquminhh khởi tạo event oOjH1fCWnN23 tại guild 1402502459871596667
+[2026-03-29T04:25:51.475Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:25:56.249Z] ℹ️  [Event oOjH1fCWnN23] Modal submitted: "ada"
+[2026-03-29T04:26:15.623Z] ℹ️  [Event oOjH1fCWnN23] Team count set: 2
+[2026-03-29T04:26:22.617Z] ℹ️  [Event oOjH1fCWnN23] Mode set: react
+[2026-03-29T04:26:28.226Z] ℹ️  [Event oOjH1fCWnN23] Config finalized: 2 teams, mode=react
+[2026-03-29T04:26:29.323Z] ℹ️  [Event oOjH1fCWnN23] Public message posted: 1487669254164840600
+[2026-03-29T04:26:34.919Z] ℹ️  [Event oOjH1fCWnN23] nguynquminhh → Nhóm 1 (total: 1)
+[2026-03-29T04:27:10.141Z] ℹ️  [Event oOjH1fCWnN23] nguyenminh.2608 → Nhóm 2 (total: 2)
+[2026-03-29T04:27:13.808Z] ℹ️  [Event oOjH1fCWnN23] STARTED — creating channels...
+[2026-03-29T04:27:14.331Z] ℹ️  [ChannelService] Created category: [Sự kiện] ada (1487669443248128131)
+[2026-03-29T04:27:15.928Z] ℹ️  [ChannelService] Created channels for team 1: text=1487669445685018655, voice=1487669448272777328
+[2026-03-29T04:27:17.320Z] ℹ️  [ChannelService] Created channels for team 2: text=1487669451842126056, voice=1487669453662588998
+[2026-03-29T04:27:18.439Z] ℹ️  [Event oOjH1fCWnN23] Channels created successfully
+[2026-03-29T04:27:55.992Z] ℹ️  [Event oOjH1fCWnN23] ENDING — starting archive transaction...
+[2026-03-29T04:27:56.458Z] ℹ️  [Archive] Transcript created for team 1
+[2026-03-29T04:27:56.871Z] ℹ️  [Archive] Transcript created for team 2
+[2026-03-29T04:27:56.872Z] ℹ️  [Event oOjH1fCWnN23] Transcripts generated: 2 file(s)
+[2026-03-29T04:27:56.947Z] ℹ️  [Archive] Event oOjH1fCWnN23 saved to database
+[2026-03-29T04:27:56.948Z] ℹ️  [Event oOjH1fCWnN23] Saved to database
+[2026-03-29T04:27:58.960Z] ℹ️  [ChannelService] Cleanup done: 5 channel(s) deleted
+[2026-03-29T04:27:58.960Z] ℹ️  [Event oOjH1fCWnN23] Channels cleaned up
+[2026-03-29T04:27:58.961Z] ⚠️  [Archive] EVENT_ARCHIVE_CHANNEL_ID not set in .env — skipping summary
+[2026-03-29T04:27:58.961Z] ℹ️  [Event oOjH1fCWnN23] Summary sent to archive channel
+[2026-03-29T04:27:59.348Z] ℹ️  [Event oOjH1fCWnN23] Fully ended and cleaned up
+[2026-03-29T04:30:03.608Z] ℹ️  ✅ Loaded command: event
+[2026-03-29T04:30:04.187Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-29T04:30:04.295Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-29T04:30:11.243Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:30:11.243Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:30:11.244Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:30:12.252Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:30:12.306Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:30:12.307Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:30:12.458Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T04:30:12.459Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:30:14.041Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:30:14.041Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:30:14.046Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:30:48.590Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:30:48.590Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:30:48.591Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:30:49.611Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:30:49.663Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:30:49.664Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:30:49.804Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T04:30:49.805Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:30:51.240Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:30:51.241Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:30:51.246Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:30:55.591Z] ℹ️  [Event] nguynquminhh khởi tạo event k8529J1pqlOE tại guild 1402502459871596667
+[2026-03-29T04:30:56.275Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:31:02.377Z] ℹ️  [Event k8529J1pqlOE] Modal submitted: "as"
+[2026-03-29T04:31:05.196Z] ℹ️  [Event k8529J1pqlOE] Mode set: random
+[2026-03-29T04:31:13.437Z] ℹ️  [Event k8529J1pqlOE] Team count set: 2
+[2026-03-29T04:31:15.987Z] ℹ️  [Event k8529J1pqlOE] Config finalized: 2 teams, mode=random
+[2026-03-29T04:31:16.924Z] ℹ️  [Event k8529J1pqlOE] Public message posted: 1487670460886810676
+[2026-03-29T04:31:20.154Z] ℹ️  [Event k8529J1pqlOE] +Join: nguynquminhh (total: 1)
+[2026-03-29T04:31:24.012Z] ℹ️  [Event k8529J1pqlOE] +Join: nguyenminh.2608 (total: 2)
+[2026-03-29T04:31:29.921Z] ℹ️  [Event k8529J1pqlOE] STARTED — creating channels...
+[2026-03-29T04:31:30.606Z] ℹ️  [ChannelService] Created category: [Sự kiện] as (1487670517963165766)
+[2026-03-29T04:31:32.277Z] ℹ️  [ChannelService] Created channels for team 1: text=1487670520102129685, voice=1487670522455265463
+[2026-03-29T04:31:33.893Z] ℹ️  [ChannelService] Created channels for team 2: text=1487670527211602051, voice=1487670528910299347
+[2026-03-29T04:31:34.711Z] ℹ️  [Event k8529J1pqlOE] Channels created successfully
+[2026-03-29T04:31:42.382Z] ℹ️  [Event k8529J1pqlOE] ENDING — starting archive transaction...
+[2026-03-29T04:31:42.872Z] ℹ️  [Archive] Transcript created for team 1
+[2026-03-29T04:31:43.234Z] ℹ️  [Archive] Transcript created for team 2
+[2026-03-29T04:31:43.234Z] ℹ️  [Event k8529J1pqlOE] Transcripts generated: 2 file(s)
+[2026-03-29T04:31:43.309Z] ℹ️  [Archive] Event k8529J1pqlOE saved to database
+[2026-03-29T04:31:43.310Z] ℹ️  [Event k8529J1pqlOE] Saved to database
+[2026-03-29T04:31:45.389Z] ℹ️  [ChannelService] Cleanup done: 5 channel(s) deleted
+[2026-03-29T04:31:45.389Z] ℹ️  [Event k8529J1pqlOE] Channels cleaned up
+[2026-03-29T04:31:45.725Z] ⚠️  [Archive] Archive channel 1402502459871596667 not found
+[2026-03-29T04:31:45.725Z] ℹ️  [Event k8529J1pqlOE] Summary sent to archive channel
+[2026-03-29T04:31:46.225Z] ℹ️  [Event k8529J1pqlOE] Fully ended and cleaned up
+[2026-03-29T04:32:41.980Z] ℹ️  [Event] nguyenminh.2608 khởi tạo event ipQ6TlWK6iC0 tại guild 1402502459871596667
+[2026-03-29T04:32:42.740Z] ℹ️  Command executed: event by nguyenminh.2608
+[2026-03-29T04:32:48.792Z] ℹ️  [Event ipQ6TlWK6iC0] Modal submitted: "a"
+[2026-03-29T04:32:52.102Z] ℹ️  [Event ipQ6TlWK6iC0] Team count set: 2
+[2026-03-29T04:32:54.177Z] ℹ️  [Event ipQ6TlWK6iC0] Mode set: random
+[2026-03-29T04:32:58.348Z] ℹ️  [Event ipQ6TlWK6iC0] Config finalized: 2 teams, mode=random
+[2026-03-29T04:32:59.582Z] ℹ️  [Event ipQ6TlWK6iC0] Public message posted: 1487670890899570718
+[2026-03-29T04:33:04.191Z] ℹ️  [Event ipQ6TlWK6iC0] +Join: nguynquminhh (total: 1)
+[2026-03-29T04:33:33.645Z] ℹ️  [Event ipQ6TlWK6iC0] +Join: nguyenminh.2608 (total: 2)
+[2026-03-29T04:33:37.486Z] ℹ️  [Event ipQ6TlWK6iC0] STARTED — creating channels...
+[2026-03-29T04:33:37.916Z] ℹ️  [ChannelService] Created category: [Sự kiện] a (1487671052183011418)
+[2026-03-29T04:33:39.691Z] ℹ️  [ChannelService] Created channels for team 1: text=1487671053986828430, voice=1487671056540893206
+[2026-03-29T04:33:41.170Z] ℹ️  [ChannelService] Created channels for team 2: text=1487671061372862546, voice=1487671063868346409
+[2026-03-29T04:33:42.199Z] ℹ️  [Event ipQ6TlWK6iC0] Channels created successfully
+[2026-03-29T04:34:16.727Z] ℹ️  [Event ipQ6TlWK6iC0] ENDING — starting archive transaction...
+[2026-03-29T04:34:17.282Z] ℹ️  [Archive] Transcript created for team 1
+[2026-03-29T04:34:17.674Z] ℹ️  [Archive] Transcript created for team 2
+[2026-03-29T04:34:17.675Z] ℹ️  [Event ipQ6TlWK6iC0] Transcripts generated: 2 file(s)
+[2026-03-29T04:34:17.749Z] ℹ️  [Archive] Event ipQ6TlWK6iC0 saved to database
+[2026-03-29T04:34:17.750Z] ℹ️  [Event ipQ6TlWK6iC0] Saved to database
+[2026-03-29T04:34:20.352Z] ℹ️  [ChannelService] Cleanup done: 5 channel(s) deleted
+[2026-03-29T04:34:20.352Z] ℹ️  [Event ipQ6TlWK6iC0] Channels cleaned up
+[2026-03-29T04:34:20.686Z] ⚠️  [Archive] Archive channel 1402502459871596667 not found
+[2026-03-29T04:34:20.687Z] ℹ️  [Event ipQ6TlWK6iC0] Summary sent to archive channel
+[2026-03-29T04:34:21.238Z] ℹ️  [Event ipQ6TlWK6iC0] Fully ended and cleaned up
+[2026-03-29T04:34:30.763Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T04:34:30.764Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T04:34:30.764Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T04:34:31.426Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T04:34:31.489Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T04:34:31.490Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T04:34:31.656Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T04:34:31.657Z] ℹ️  ✅ Đã load Events
+[2026-03-29T04:34:33.078Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T04:34:33.078Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T04:34:33.085Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T04:34:35.107Z] ℹ️  [Event] nguynquminhh khởi tạo event 6ec33eFKpDya tại guild 1402502459871596667
+[2026-03-29T04:34:35.778Z] ℹ️  Command executed: event by nguynquminhh
+[2026-03-29T04:34:43.794Z] ℹ️  [Event 6ec33eFKpDya] Modal submitted: "test"
+[2026-03-29T04:34:46.566Z] ℹ️  [Event 6ec33eFKpDya] Team count set: 2
+[2026-03-29T04:34:49.489Z] ℹ️  [Event 6ec33eFKpDya] Mode set: random
+[2026-03-29T04:34:51.431Z] ℹ️  [Event 6ec33eFKpDya] Config finalized: 2 teams, mode=random
+[2026-03-29T04:34:52.439Z] ℹ️  [Event 6ec33eFKpDya] Public message posted: 1487671364729962557
+[2026-03-29T04:34:53.927Z] ℹ️  [Event 6ec33eFKpDya] +Join: nguyenminh.2608 (total: 1)
+[2026-03-29T04:34:56.833Z] ℹ️  [Event 6ec33eFKpDya] +Join: nguynquminhh (total: 2)
+[2026-03-29T04:35:00.408Z] ℹ️  [Event 6ec33eFKpDya] STARTED — creating channels...
+[2026-03-29T04:35:00.835Z] ℹ️  [ChannelService] Created category: [Sự kiện] test (1487671400000131142)
+[2026-03-29T04:35:02.466Z] ℹ️  [ChannelService] Created channels for team 1: text=1487671402386685972, voice=1487671404760404008
+[2026-03-29T04:35:03.965Z] ℹ️  [ChannelService] Created channels for team 2: text=1487671408728215743, voice=1487671410884087908
+[2026-03-29T04:35:04.951Z] ℹ️  [Event 6ec33eFKpDya] Channels created successfully
+[2026-03-29T04:35:08.405Z] ℹ️  [Event 6ec33eFKpDya] ENDING — starting archive transaction...
+[2026-03-29T04:35:11.220Z] ℹ️  [Archive] Transcript created for team 1
+[2026-03-29T04:35:11.622Z] ℹ️  [Archive] Transcript created for team 2
+[2026-03-29T04:35:11.622Z] ℹ️  [Event 6ec33eFKpDya] Transcripts generated: 2 file(s)
+[2026-03-29T04:35:11.696Z] ℹ️  [Archive] Event 6ec33eFKpDya saved to database
+[2026-03-29T04:35:11.696Z] ℹ️  [Event 6ec33eFKpDya] Saved to database
+[2026-03-29T04:35:14.077Z] ℹ️  [ChannelService] Cleanup done: 5 channel(s) deleted
+[2026-03-29T04:35:14.078Z] ℹ️  [Event 6ec33eFKpDya] Channels cleaned up
+[2026-03-29T04:35:14.697Z] ℹ️  [Archive] Summary sent to #archive
+[2026-03-29T04:35:14.698Z] ℹ️  [Event 6ec33eFKpDya] Summary sent to archive channel
+[2026-03-29T04:35:15.393Z] ℹ️  [Event 6ec33eFKpDya] Fully ended and cleaned up
+[2026-03-29T05:34:30.768Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T06:34:30.775Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T07:34:30.783Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T08:34:30.790Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T08:56:18.286Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T08:56:18.289Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T08:56:18.289Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T08:56:19.001Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T08:56:19.056Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T08:56:19.057Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T08:56:19.205Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T08:56:19.206Z] ℹ️  ✅ Đã load Events
+[2026-03-29T08:56:20.659Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T08:56:20.660Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T08:56:20.664Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T09:56:18.299Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T10:56:18.308Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T11:06:23.928Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T11:06:23.929Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T11:06:23.929Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T11:06:24.924Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T11:06:25.002Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T11:06:25.003Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T11:06:25.216Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T11:06:25.217Z] ℹ️  ✅ Đã load Events
+[2026-03-29T11:06:27.219Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T11:06:27.220Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T11:06:27.224Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T12:06:23.930Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T13:06:23.930Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T14:06:25.700Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T15:06:25.710Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T16:06:25.709Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T17:06:25.727Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T18:06:25.738Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T19:06:25.741Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T19:41:19.312Z] ℹ️  📅 EventStateManager initialized
+[2026-03-29T19:41:19.313Z] ℹ️  📊 StatsCollector initialized
+[2026-03-29T19:41:19.314Z] ℹ️  [MongoDB] Đang kết nối...
+[2026-03-29T19:41:20.360Z] ℹ️  ✅ MongoDB kết nối thành công
+[2026-03-29T19:41:20.433Z] ℹ️  ✅ Loaded 19 commands
+[2026-03-29T19:41:20.434Z] ℹ️  ✅ Đã load Commands
+[2026-03-29T19:41:20.654Z] ℹ️  ✅ Loaded 6 events
+[2026-03-29T19:41:20.654Z] ℹ️  ✅ Đã load Events
+[2026-03-29T19:41:22.159Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-29T19:41:22.159Z] ℹ️  🎯 Bot is in 2 guilds
+[2026-03-29T19:41:22.165Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-29T19:56:09.740Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-29T20:41:19.313Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T21:41:19.326Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T22:41:19.332Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-29T23:41:19.340Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-30T00:41:19.346Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-30T01:41:19.356Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory
+[2026-03-30T02:41:19.356Z] ℹ️  🧹 Event state cleanup — còn 0 event(s) trong memory

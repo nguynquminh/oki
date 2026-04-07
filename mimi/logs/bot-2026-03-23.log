@@ -1,0 +1,86 @@
+[2026-03-23T13:32:05.984Z] ℹ️  📊 StatsCollector initialized
+[2026-03-23T13:32:05.989Z] ℹ️  ✅ SQLite connected: C:\Users\quang\Desktop\abcxyz\html\portfolio\mimi\src\database\data\mimi.db
+[2026-03-23T13:32:05.990Z] ℹ️  ✅ Đã kết nối MongoDB
+[2026-03-23T13:32:06.076Z] ℹ️  ✅ Loaded 12 commands
+[2026-03-23T13:32:06.076Z] ℹ️  ✅ Đã load Commands
+[2026-03-23T13:32:06.079Z] ℹ️  ✅ Loaded 5 events
+[2026-03-23T13:32:06.079Z] ℹ️  ✅ Đã load Events
+[2026-03-23T13:32:08.728Z] ℹ️  ✅ Bot logged in as mimiyeu#5298
+[2026-03-23T13:32:08.730Z] ℹ️  🎯 Bot is in 1 guilds
+[2026-03-23T13:32:08.791Z] ℹ️  🌐 API Server running on http://localhost:3000
+[2026-03-23T13:32:38.282Z] ℹ️  Command executed: recipe by nguynquminhh
+[2026-03-23T13:32:49.936Z] ℹ️  Command executed: recipe by nguynquminhh
+[2026-03-23T13:33:17.787Z] ℹ️  Command executed: recipe by nguynquminhh
+[2026-03-23T13:33:44.136Z] ℹ️  Command executed: recipe by nguynquminhh
+[2026-03-23T13:33:59.583Z] ℹ️  Command executed: recipe by nguynquminhh
+[2026-03-23T13:34:51.024Z] ℹ️  Command executed: recipe by nguynquminhh
+[2026-03-24T04:25:30.107Z] ℹ️  ✅ Loaded command: kitsu
+[2026-03-24T04:25:30.838Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-24T04:25:30.843Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-24T04:25:45.218Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:26:01.397Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:27:08.270Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:27:21.420Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:27:35.982Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:27:49.476Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:30:33.434Z] ℹ️  ✅ Loaded command: kitsu
+[2026-03-24T04:30:33.998Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-24T04:30:34.000Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-24T04:30:37.004Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:30:49.082Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:31:02.663Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:33:40.439Z] ℹ️  ✅ Loaded command: kitsu
+[2026-03-24T04:33:41.031Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-24T04:33:41.035Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-24T04:34:02.524Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:34:13.536Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:34:22.327Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T04:34:35.826Z] ℹ️  Command executed: kitsu by nguynquminhh
+[2026-03-24T11:59:27.226Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-24T11:59:27.228Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-24T11:59:32.758Z] ℹ️  ✅ Loaded command: spotify
+[2026-03-24T11:59:33.303Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-24T11:59:33.305Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-24T11:59:49.445Z] ℹ️  Command executed: spotify by nguynquminhh
+[2026-03-24T12:00:06.845Z] ℹ️  Command executed: spotify by nguynquminhh
+[2026-03-24T12:00:39.453Z] ℹ️  Command executed: spotify by nguynquminhh
+[2026-03-24T12:01:12.932Z] ℹ️  Command executed: spotify by nguynquminhh
+[2026-03-24T13:56:51.955Z] ℹ️  ✅ Member joined: OwO#8456 in webhook
+[2026-03-24T14:03:02.365Z] ℹ️  ✅ Loaded command: mod
+[2026-03-24T14:03:02.936Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-24T14:03:02.942Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-24T14:03:48.575Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-24T14:04:43.252Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-24T14:04:57.773Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-24T14:05:16.724Z] ℹ️  ✅ Loaded command: mod
+[2026-03-24T14:05:17.581Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-24T14:05:17.586Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-24T14:05:25.726Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-24T14:06:05.310Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-24T14:06:20.405Z] ℹ️  ✅ Loaded command: mod
+[2026-03-24T14:06:20.980Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-24T14:06:20.982Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-24T14:06:32.021Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-24T14:06:48.726Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-24T14:09:51.902Z] ℹ️  ✅ Loaded command: mod
+[2026-03-24T14:09:52.547Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-24T14:09:52.550Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-24T14:10:02.795Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-25T03:40:03.216Z] ℹ️  ✅ Loaded command: setup
+[2026-03-25T03:40:04.333Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-25T03:40:04.335Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-25T03:40:05.655Z] ℹ️  Command executed: setup by nguynquminhh
+[2026-03-25T03:40:31.836Z] ℹ️  Command executed: setup by nguynquminhh
+[2026-03-25T03:41:42.123Z] ℹ️  Command executed: setup by nguynquminhh
+[2026-03-25T03:44:44.592Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-25T03:44:52.732Z] ℹ️  Command executed: mod by nguynquminhh
+[2026-03-25T03:54:57.417Z] ℹ️  ✅ Loaded command: ticketsetup
+[2026-03-25T03:54:57.990Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-25T03:54:57.991Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-25T03:55:01.747Z] ℹ️  Command executed: ticketsetup by nguynquminhh
+[2026-03-25T03:55:50.249Z] ℹ️  Command executed: ticketsetup by nguynquminhh
+[2026-03-25T03:56:47.996Z] ℹ️  Command executed: ticketsetup by nguyenminh.2608
+[2026-03-25T03:57:07.565Z] ℹ️  ✅ Loaded command: ticketsetup
+[2026-03-25T03:57:08.227Z] ℹ️  Command: nguynquminhh used cmd load
+[2026-03-25T03:57:08.228Z] ℹ️  Command executed: cmd by nguynquminhh
+[2026-03-25T03:57:42.320Z] ℹ️  Command executed: ticketsetup by nguynquminhh

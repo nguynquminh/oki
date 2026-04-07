@@ -135,17 +135,22 @@ module.exports = {
     async cleanupEventChannels(guild, state) {
         let deletedCount = 0;
 
-        for (const ch of state.createdChannels) {
+        // Parallelize channel deletion
+        const deletePromises = state.createdChannels.map(async (ch) => {
             try {
                 const channel = await guild.channels.fetch(ch.id).catch(() => null);
                 if (channel) {
                     await channel.delete(`[Event Cleanup] ${state.eventId}`);
-                    deletedCount++;
+                    return true;
                 }
             } catch (err) {
                 logger.warn(`[ChannelService] Could not delete channel ${ch.id}: ${err.message}`);
             }
-        }
+            return false;
+        });
+
+        const results = await Promise.all(deletePromises);
+        deletedCount = results.filter(Boolean).length;
 
         if (state.categoryId) {
             try {

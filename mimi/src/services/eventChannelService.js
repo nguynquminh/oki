@@ -41,10 +41,8 @@ module.exports = {
 
         logger.info(`[ChannelService] Created category: ${category.name} (${category.id})`);
 
-        const channels = [];
-
         // ── 2. Tạo kênh cho từng nhóm ──
-        for (const [teamIdx, memberIds] of Object.entries(teams)) {
+        const teamPromises = Object.entries(teams).map(async ([teamIdx, memberIds]) => {
             const memberOverwrites = memberIds.map((userId) => ({
                 id: userId,
                 allow: [
@@ -117,13 +115,16 @@ module.exports = {
                 ],
             });
 
-            channels.push(
+            logger.info(`[ChannelService] Created channels for team ${teamIdx}: text=${textCh.id}, voice=${voiceCh.id}`);
+
+            return [
                 { id: textCh.id, type: 'text', teamIndex: parseInt(teamIdx) },
                 { id: voiceCh.id, type: 'voice', teamIndex: parseInt(teamIdx) },
-            );
+            ];
+        });
 
-            logger.info(`[ChannelService] Created channels for team ${teamIdx}: text=${textCh.id}, voice=${voiceCh.id}`);
-        }
+        const channelsArrays = await Promise.all(teamPromises);
+        const channels = channelsArrays.flat();
 
         return { categoryId: category.id, channels };
     },

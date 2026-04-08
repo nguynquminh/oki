@@ -8,8 +8,9 @@ export default function Navbar({ onMenuClick }) {
                     <button
                         onClick={onMenuClick}
                         className="lg:hidden p-2 hover:bg-slate-800 rounded-lg transition-colors"
+                        aria-label="Toggle navigation menu"
                     >
-                        <Menu className="w-6 h-6 text-white" />
+                        <Menu className="w-6 h-6 text-white" aria-hidden="true" />
                     </button>
                     <h1 className="text-xl font-bold text-white">Liên Quân Encyclopedia</h1>
                 </div>

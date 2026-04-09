@@ -29,6 +29,7 @@ export default function GlassModal({ isOpen, onClose, title, children }) {
                             <button 
                                 onClick={onClose}
                                 className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                                aria-label="Close modal"
                             >
                                 <X className="w-6 h-6" />
                             </button>

@@ -8,6 +8,7 @@ export default function Navbar({ onMenuClick }) {
                     <button
                         onClick={onMenuClick}
                         className="lg:hidden p-2 hover:bg-slate-800 rounded-lg transition-colors"
+                        aria-label="Toggle menu"
                     >
                         <Menu className="w-6 h-6 text-white" />
                     </button>

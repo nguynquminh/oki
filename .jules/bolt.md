@@ -1,0 +1,3 @@
+## 2026-04-09 - [Parallelizing I/O Bound Tasks in Discord Bot]
+**Learning:** Sequential `await` in loops (like `for...of`) for I/O operations such as fetching channels and creating transcripts from Discord API can create significant bottlenecks, especially for events with many teams. This is a common pattern in bot development that can be easily overlooked.
+**Action:** Always prefer `Promise.all()` over an array of mapped promises for independent asynchronous tasks to maximize concurrency and reduce overall execution time.

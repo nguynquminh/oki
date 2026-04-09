@@ -13,15 +13,16 @@ module.exports = {
      * @returns {Array<{ teamIndex, attachment, fileName }>}
      */
     async generateTranscripts(guild, state) {
-        const results = [];
         const textChannels = state.createdChannels.filter((c) => c.type === 'text');
 
-        for (const ch of textChannels) {
+        // ⚡ Bolt: Parallelized transcript generation to avoid sequential I/O bottlenecks.
+        // This significantly speeds up the archival process for events with many teams.
+        const promises = textChannels.map(async (ch) => {
             try {
                 const channel = await guild.channels.fetch(ch.id).catch(() => null);
                 if (!channel) {
                     logger.warn(`[Archive] Channel ${ch.id} not found, skipping transcript`);
-                    continue;
+                    return null;
                 }
 
                 const fileName = `transcript-${state.eventId}-nhom-${ch.teamIndex}.html`;
@@ -35,19 +36,23 @@ module.exports = {
                     footerText: `Event: ${state.name} • Nhóm ${ch.teamIndex} • {number} tin nhắn`,
                 });
 
-                results.push({
+                logger.info(`[Archive] Transcript created for team ${ch.teamIndex}`);
+
+                return {
                     teamIndex: ch.teamIndex,
                     attachment: transcript,
                     fileName,
-                });
-
-                logger.info(`[Archive] Transcript created for team ${ch.teamIndex}`);
+                };
             } catch (err) {
                 logger.error(`[Archive] Transcript error for channel ${ch.id}:`, err);
+                return null;
             }
-        }
+        });
 
-        return results;
+        const results = await Promise.all(promises);
+
+        // Filter out any nulls from failed/skipped transcripts
+        return results.filter(result => result !== null);
     },
 
     /**

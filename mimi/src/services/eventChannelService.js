@@ -85,22 +85,22 @@ module.exports = {
                 ...memberOverwrites,
             ];
 
-            // Text channel
-            const textCh = await guild.channels.create({
-                name: `nhóm-${teamIdx}-chat`,
-                type: ChannelType.GuildText,
-                parent: category.id,
-                permissionOverwrites: baseOverwrites,
-                topic: `Kênh chat của Nhóm ${teamIdx} • Sự kiện: ${eventName}`,
-            });
-
-            // Voice channel
-            const voiceCh = await guild.channels.create({
-                name: `Nhóm ${teamIdx} Voice`,
-                type: ChannelType.GuildVoice,
-                parent: category.id,
-                permissionOverwrites: baseOverwrites,
-            });
+            // ⚡ Bolt: Create text and voice channels concurrently per team
+            const [textCh, voiceCh] = await Promise.all([
+                guild.channels.create({
+                    name: `nhóm-${teamIdx}-chat`,
+                    type: ChannelType.GuildText,
+                    parent: category.id,
+                    permissionOverwrites: baseOverwrites,
+                    topic: `Kênh chat của Nhóm ${teamIdx} • Sự kiện: ${eventName}`,
+                }),
+                guild.channels.create({
+                    name: `Nhóm ${teamIdx} Voice`,
+                    type: ChannelType.GuildVoice,
+                    parent: category.id,
+                    permissionOverwrites: baseOverwrites,
+                })
+            ]);
 
             // Gửi tin chào mừng
             const memberMentions = memberIds.map((id) => `<@${id}>`).join(', ');
@@ -135,21 +135,26 @@ module.exports = {
     async cleanupEventChannels(guild, state) {
         let deletedCount = 0;
 
-        // Parallelize channel deletion
-        const deletePromises = state.createdChannels.map(async (ch) => {
-            try {
-                const channel = await guild.channels.fetch(ch.id).catch(() => null);
-                if (channel) {
-                    await channel.delete(`[Event Cleanup] ${state.eventId}`);
-                    return true;
+        // ⚡ Bolt: Chunked channel deletion to avoid Discord API rate limits (HTTP 429)
+        const results = [];
+        const chunkSize = 3;
+        for (let i = 0; i < state.createdChannels.length; i += chunkSize) {
+            const chunk = state.createdChannels.slice(i, i + chunkSize);
+            const chunkPromises = chunk.map(async (ch) => {
+                try {
+                    const channel = await guild.channels.fetch(ch.id).catch(() => null);
+                    if (channel) {
+                        await channel.delete(`[Event Cleanup] ${state.eventId}`);
+                        return true;
+                    }
+                } catch (err) {
+                    logger.warn(`[ChannelService] Could not delete channel ${ch.id}: ${err.message}`);
                 }
-            } catch (err) {
-                logger.warn(`[ChannelService] Could not delete channel ${ch.id}: ${err.message}`);
-            }
-            return false;
-        });
-
-        const results = await Promise.all(deletePromises);
+                return false;
+            });
+            const chunkResults = await Promise.all(chunkPromises);
+            results.push(...chunkResults);
+        }
         deletedCount = results.filter(Boolean).length;
 
         if (state.categoryId) {

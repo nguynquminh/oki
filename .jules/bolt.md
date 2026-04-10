@@ -1,0 +1,3 @@
+## 2024-05-24 - [Optimize Discord Role and Channel Setup]
+**Learning:** Sequential `await` in loops for independent operations (like creating multiple Discord roles or channels) causes significant performance degradation. However, unthrottled concurrent execution (`Promise.all()`) can trigger API rate limits. Staggering concurrent requests using a delayed start mapped to index allows parallel execution while preventing burst limits.
+**Action:** Use `Promise.all()` with `.map((item, index) => new Promise(async (resolve) => { if (index > 0) await delay(index * delayMs); /* action */ }))` for I/O-bound tasks that hit rate-limited APIs instead of using sequential `for...of` loops.

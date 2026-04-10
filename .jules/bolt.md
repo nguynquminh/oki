@@ -1,0 +1,3 @@
+## 2024-05-24 - Awaiting Inside Loop for Transcripts in eventArchiveService
+**Learning:** Sequential `for...of` loops involving heavy asynchronous I/O operations (like fetching channels and creating transcripts via Discord API) cause unnecessary performance bottlenecks. However, raw `Promise.all` across a large unbounded array can trigger Discord's rate limits (HTTP 429).
+**Action:** Use a "bounded concurrency" or "batching" pattern (e.g., slicing arrays into batches of 3-5 and awaiting `Promise.all` per batch) to achieve parallelization performance benefits while avoiding rate-limit throttling.

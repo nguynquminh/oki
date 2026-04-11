@@ -43,86 +43,101 @@ module.exports = {
 
         const channels = [];
 
-        // ── 2. Tạo kênh cho từng nhóm ──
-        for (const [teamIdx, memberIds] of Object.entries(teams)) {
-            const memberOverwrites = memberIds.map((userId) => ({
-                id: userId,
-                allow: [
-                    PermissionFlagsBits.ViewChannel,
-                    PermissionFlagsBits.SendMessages,
-                    PermissionFlagsBits.ReadMessageHistory,
-                    PermissionFlagsBits.Connect,
-                    PermissionFlagsBits.Speak,
-                    PermissionFlagsBits.AttachFiles,
-                    PermissionFlagsBits.AddReactions,
-                ],
+        // ── 2. Tạo kênh cho từng nhóm (Tối ưu hóa: Bounded Concurrency) ──
+        const teamEntries = Object.entries(teams);
+        const chunkSize = 3; // Chunks of 3 to avoid rate limits
+
+        for (let i = 0; i < teamEntries.length; i += chunkSize) {
+            const chunk = teamEntries.slice(i, i + chunkSize);
+
+            const chunkResults = await Promise.all(chunk.map(async ([teamIdx, memberIds]) => {
+                try {
+                    const memberOverwrites = memberIds.map((userId) => ({
+                        id: userId,
+                        allow: [
+                            PermissionFlagsBits.ViewChannel,
+                            PermissionFlagsBits.SendMessages,
+                            PermissionFlagsBits.ReadMessageHistory,
+                            PermissionFlagsBits.Connect,
+                            PermissionFlagsBits.Speak,
+                            PermissionFlagsBits.AttachFiles,
+                            PermissionFlagsBits.AddReactions,
+                        ],
+                    }));
+
+                    const baseOverwrites = [
+                        {
+                            id: guild.id,
+                            deny: [PermissionFlagsBits.ViewChannel],
+                        },
+                        {
+                            id: hostId,
+                            allow: [
+                                PermissionFlagsBits.ViewChannel,
+                                PermissionFlagsBits.SendMessages,
+                                PermissionFlagsBits.ReadMessageHistory,
+                            ],
+                        },
+                        {
+                            id: guild.client.user.id,
+                            allow: [
+                                PermissionFlagsBits.ViewChannel,
+                                PermissionFlagsBits.SendMessages,
+                                PermissionFlagsBits.ReadMessageHistory,
+                                PermissionFlagsBits.ManageChannels,
+                                PermissionFlagsBits.Connect,
+                                PermissionFlagsBits.Speak,
+                            ],
+                        },
+                        ...memberOverwrites,
+                    ];
+
+                    // Text channel
+                    const textCh = await guild.channels.create({
+                        name: `nhóm-${teamIdx}-chat`,
+                        type: ChannelType.GuildText,
+                        parent: category.id,
+                        permissionOverwrites: baseOverwrites,
+                        topic: `Kênh chat của Nhóm ${teamIdx} • Sự kiện: ${eventName}`,
+                    });
+
+                    // Voice channel
+                    const voiceCh = await guild.channels.create({
+                        name: `Nhóm ${teamIdx} Voice`,
+                        type: ChannelType.GuildVoice,
+                        parent: category.id,
+                        permissionOverwrites: baseOverwrites,
+                    });
+
+                    // Gửi tin chào mừng
+                    const memberMentions = memberIds.map((id) => `<@${id}>`).join(', ');
+                    await textCh.send({
+                        embeds: [
+                            {
+                                title: `👋 Chào mừng đến Nhóm ${teamIdx}!`,
+                                description: `**Thành viên:** ${memberMentions}\n\n`
+                                    + `Đây là kênh riêng của nhóm. Hãy phối hợp với nhau tại đây.\n`
+                                    + `🔊 Voice channel: <#${voiceCh.id}>\n\n`
+                                    + `Chúc may mắn! 🍀`,
+                                color: 0x57f287,
+                            },
+                        ],
+                    });
+
+                    logger.info(`[ChannelService] Created channels for team ${teamIdx}: text=${textCh.id}, voice=${voiceCh.id}`);
+
+                    return [
+                        { id: textCh.id, type: 'text', teamIndex: parseInt(teamIdx) },
+                        { id: voiceCh.id, type: 'voice', teamIndex: parseInt(teamIdx) },
+                    ];
+                } catch (err) {
+                    logger.error(`[ChannelService] Error creating channels for team ${teamIdx}:`, err);
+                    return null;
+                }
             }));
 
-            const baseOverwrites = [
-                {
-                    id: guild.id,
-                    deny: [PermissionFlagsBits.ViewChannel],
-                },
-                {
-                    id: hostId,
-                    allow: [
-                        PermissionFlagsBits.ViewChannel,
-                        PermissionFlagsBits.SendMessages,
-                        PermissionFlagsBits.ReadMessageHistory,
-                    ],
-                },
-                {
-                    id: guild.client.user.id,
-                    allow: [
-                        PermissionFlagsBits.ViewChannel,
-                        PermissionFlagsBits.SendMessages,
-                        PermissionFlagsBits.ReadMessageHistory,
-                        PermissionFlagsBits.ManageChannels,
-                        PermissionFlagsBits.Connect,
-                        PermissionFlagsBits.Speak,
-                    ],
-                },
-                ...memberOverwrites,
-            ];
-
-            // Text channel
-            const textCh = await guild.channels.create({
-                name: `nhóm-${teamIdx}-chat`,
-                type: ChannelType.GuildText,
-                parent: category.id,
-                permissionOverwrites: baseOverwrites,
-                topic: `Kênh chat của Nhóm ${teamIdx} • Sự kiện: ${eventName}`,
-            });
-
-            // Voice channel
-            const voiceCh = await guild.channels.create({
-                name: `Nhóm ${teamIdx} Voice`,
-                type: ChannelType.GuildVoice,
-                parent: category.id,
-                permissionOverwrites: baseOverwrites,
-            });
-
-            // Gửi tin chào mừng
-            const memberMentions = memberIds.map((id) => `<@${id}>`).join(', ');
-            await textCh.send({
-                embeds: [
-                    {
-                        title: `👋 Chào mừng đến Nhóm ${teamIdx}!`,
-                        description: `**Thành viên:** ${memberMentions}\n\n`
-                            + `Đây là kênh riêng của nhóm. Hãy phối hợp với nhau tại đây.\n`
-                            + `🔊 Voice channel: <#${voiceCh.id}>\n\n`
-                            + `Chúc may mắn! 🍀`,
-                        color: 0x57f287,
-                    },
-                ],
-            });
-
-            channels.push(
-                { id: textCh.id, type: 'text', teamIndex: parseInt(teamIdx) },
-                { id: voiceCh.id, type: 'voice', teamIndex: parseInt(teamIdx) },
-            );
-
-            logger.info(`[ChannelService] Created channels for team ${teamIdx}: text=${textCh.id}, voice=${voiceCh.id}`);
+            // Flatten the results and filter out nulls to maintain deterministic ordering within the chunk
+            channels.push(...chunkResults.flat().filter(Boolean));
         }
 
         return { categoryId: category.id, channels };
@@ -135,22 +150,30 @@ module.exports = {
     async cleanupEventChannels(guild, state) {
         let deletedCount = 0;
 
-        // Parallelize channel deletion
-        const deletePromises = state.createdChannels.map(async (ch) => {
-            try {
-                const channel = await guild.channels.fetch(ch.id).catch(() => null);
-                if (channel) {
-                    await channel.delete(`[Event Cleanup] ${state.eventId}`);
-                    return true;
-                }
-            } catch (err) {
-                logger.warn(`[ChannelService] Could not delete channel ${ch.id}: ${err.message}`);
-            }
-            return false;
-        });
+        // Parallelize channel deletion using bounded concurrency to prevent rate limits
+        const chunkSize = 5;
+        const channelsToProcess = [...state.createdChannels];
+        let successfulDeletes = 0;
 
-        const results = await Promise.all(deletePromises);
-        deletedCount = results.filter(Boolean).length;
+        for (let i = 0; i < channelsToProcess.length; i += chunkSize) {
+            const chunk = channelsToProcess.slice(i, i + chunkSize);
+
+            const results = await Promise.all(chunk.map(async (ch) => {
+                try {
+                    const channel = await guild.channels.fetch(ch.id).catch(() => null);
+                    if (channel) {
+                        await channel.delete(`[Event Cleanup] ${state.eventId}`);
+                        return true;
+                    }
+                } catch (err) {
+                    logger.warn(`[ChannelService] Could not delete channel ${ch.id}: ${err.message}`);
+                }
+                return false;
+            }));
+
+            successfulDeletes += results.filter(Boolean).length;
+        }
+        deletedCount = successfulDeletes;
 
         if (state.categoryId) {
             try {

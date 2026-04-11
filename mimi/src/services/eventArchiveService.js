@@ -13,9 +13,13 @@ module.exports = {
      * @returns {Array<{ teamIndex, attachment, fileName }>}
      */
     async generateTranscripts(guild, state) {
-        const results = [];
         const textChannels = state.createdChannels.filter((c) => c.type === 'text');
 
+        const transcriptPromises = textChannels.map(async (ch) => {
+            try {
+                const channel = await guild.channels.fetch(ch.id).catch(() => null);
+                if (!channel) {
+                    logger.warn(`[Archive] Channel ${ch.id} not found, skipping transcript`);
         // Lô xử lý song song để tối ưu tốc độ trong khi tránh rate limit của Discord
         const BATCH_SIZE = 3;
 
@@ -54,12 +58,36 @@ module.exports = {
                 }
             });
 
+                const fileName = `transcript-${state.eventId}-nhom-${ch.teamIndex}.html`;
+
+                const transcript = await discordTranscripts.createTranscript(channel, {
+                    limit: -1,
+                    returnType: 'attachment',
+                    filename: fileName,
+                    poweredBy: false,
+                    saveImages: false,
+                    footerText: `Event: ${state.name} • Nhóm ${ch.teamIndex} • {number} tin nhắn`,
+                });
+
+                logger.info(`[Archive] Transcript created for team ${ch.teamIndex}`);
+
+                return {
+                    teamIndex: ch.teamIndex,
+                    attachment: transcript,
+                    fileName,
+                };
+            } catch (err) {
+                logger.error(`[Archive] Transcript error for channel ${ch.id}:`, err);
+                return null;
+            }
+        });
             // Chờ lô hiện tại hoàn thành trước khi chuyển sang lô tiếp theo
             const batchResults = await Promise.all(batchPromises);
             results.push(...batchResults.filter(Boolean));
         }
 
-        return results;
+        const results = await Promise.all(transcriptPromises);
+        return results.filter(Boolean);
     },
 
     /**

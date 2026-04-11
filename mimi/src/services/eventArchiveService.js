@@ -20,8 +20,43 @@ module.exports = {
                 const channel = await guild.channels.fetch(ch.id).catch(() => null);
                 if (!channel) {
                     logger.warn(`[Archive] Channel ${ch.id} not found, skipping transcript`);
+        // Lô xử lý song song để tối ưu tốc độ trong khi tránh rate limit của Discord
+        const BATCH_SIZE = 3;
+
+        for (let i = 0; i < textChannels.length; i += BATCH_SIZE) {
+            const batch = textChannels.slice(i, i + BATCH_SIZE);
+
+            const batchPromises = batch.map(async (ch) => {
+                try {
+                    const channel = await guild.channels.fetch(ch.id).catch(() => null);
+                    if (!channel) {
+                        logger.warn(`[Archive] Channel ${ch.id} not found, skipping transcript`);
+                        return null;
+                    }
+
+                    const fileName = `transcript-${state.eventId}-nhom-${ch.teamIndex}.html`;
+
+                    const transcript = await discordTranscripts.createTranscript(channel, {
+                        limit: -1,
+                        returnType: 'attachment',
+                        filename: fileName,
+                        poweredBy: false,
+                        saveImages: false,
+                        footerText: `Event: ${state.name} • Nhóm ${ch.teamIndex} • {number} tin nhắn`,
+                    });
+
+                    logger.info(`[Archive] Transcript created for team ${ch.teamIndex}`);
+
+                    return {
+                        teamIndex: ch.teamIndex,
+                        attachment: transcript,
+                        fileName,
+                    };
+                } catch (err) {
+                    logger.error(`[Archive] Transcript error for channel ${ch.id}:`, err);
                     return null;
                 }
+            });
 
                 const fileName = `transcript-${state.eventId}-nhom-${ch.teamIndex}.html`;
 
@@ -46,6 +81,10 @@ module.exports = {
                 return null;
             }
         });
+            // Chờ lô hiện tại hoàn thành trước khi chuyển sang lô tiếp theo
+            const batchResults = await Promise.all(batchPromises);
+            results.push(...batchResults.filter(Boolean));
+        }
 
         const results = await Promise.all(transcriptPromises);
         return results.filter(Boolean);

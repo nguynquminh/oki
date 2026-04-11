@@ -1,0 +1,4 @@
+## 2024-04-10 - [Remove Hardcoded MongoDB URI Secrets]
+**Vulnerability:** A hardcoded MongoDB connection URI containing plaintext credentials was found in `mimi/src/database/connection.js` and `mimi/fix-db-uri.js`. This allowed fallback connections to bypass environment variable restrictions, exposing database credentials.
+**Learning:** Hardcoding credentials as fallbacks can easily be forgotten and deployed to production, increasing the risk of credential leakage if the source code is compromised. A dedicated script (`mimi/fix-db-uri.js`) was even present, further cementing the leaked credentials into the environment.
+**Prevention:** Always rely strictly on environment variables (e.g., `process.env.MONGODB_URI`) for sensitive credentials. If a required environment variable is not defined, fail securely by throwing an error rather than falling back to a default value that includes secrets.

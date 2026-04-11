@@ -96,6 +96,61 @@ function startApiServer(client) {
         }
     });
 
+
+    // Placeholder Endpoints for new admin pages
+    app.get('/api/servers', (req, res) => {
+        try {
+            const topGuilds = client.statsCollector ? client.statsCollector.getTopGuilds() : [];
+            res.json({ success: true, data: { servers: topGuilds } });
+        } catch (err) {
+            logger.error('GET /api/servers error:', err);
+            res.status(500).json({ success: false, error: 'Internal Server Error' });
+        }
+    });
+
+    app.get('/api/security', (req, res) => {
+        res.json({
+            success: true,
+            data: {
+                status: "Secure",
+                recentAlerts: [],
+                lastScan: new Date().toISOString()
+            }
+        });
+    });
+
+    app.get('/api/logs', (req, res) => {
+        try {
+            const logs = client.statsCollector ? client.statsCollector.getRecentActivity() : [];
+            res.json({ success: true, data: { logs } });
+        } catch (err) {
+            logger.error('GET /api/logs error:', err);
+            res.status(500).json({ success: false, error: 'Internal Server Error' });
+        }
+    });
+
+    app.get('/api/settings', (req, res) => {
+        res.json({
+            success: true,
+            data: {
+                maintenanceMode: false,
+                version: "2.4.1",
+                prefix: "!"
+            }
+        });
+    });
+
+    app.get('/api/full-stats', async (req, res) => {
+        try {
+            const stats = client.statsCollector ? client.statsCollector.getSnapshot() : {};
+            const pie = client.statsCollector ? client.statsCollector.getPieChartData() : { labels: [], data: [] };
+            res.json({ success: true, data: { stats, distribution: pie } });
+        } catch (err) {
+            logger.error('GET /api/full-stats error:', err);
+            res.status(500).json({ success: false, error: 'Internal Server Error' });
+        }
+    });
+
     app.get('/health', (_req, res) => {
         res.json({ status: 'ok', timestamp: new Date().toISOString() });
     });

@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thành viên - Admin Dashboard</title>
@@ -10,258 +9,283 @@
     <link rel="stylesheet" href="assets/css/dashboard.css" />
     <link rel="stylesheet" href="assets/css/members.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/transition.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <canvas id="heartCanvas"></canvas>
     <div class="bokeh-layer">
-        <div class="bokeh"></div>
-        <div class="bokeh"></div>
-        <div class="bokeh"></div>
-        <div class="bokeh"></div>
-        <div class="bokeh"></div>
+      <div class="bokeh"></div>
+      <div class="bokeh"></div>
+      <div class="bokeh"></div>
+      <div class="bokeh"></div>
+      <div class="bokeh"></div>
     </div>
 
     <button class="mobile-toggle" id="mobileToggle" aria-label="Mở/đóng menu">
-        <i class="fas fa-bars"></i>
+      <i class="fas fa-bars"></i>
     </button>
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <a href="index.html" class="sidebar-logo">
-                Mimi <span class="logo-heart">♥</span>
-            </a>
-            <div class="sidebar-version">v2.4.1 • Admin Panel</div>
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-logo">
+          Mimi <span class="logo-heart">♥</span>
+        </a>
+        <div class="sidebar-version">v2.4.1 • Admin Panel</div>
+      </div>
+
+      <div class="nav-section-label">Chính</div>
+      <a href="dashboard.html" class="nav-item">
+        <i class="fas fa-th-large"></i>
+        <span>Tổng quan</span>
+      </a>
+      <a href="servers.html" class="nav-item">
+        <i class="fas fa-server"></i>
+        <span>Servers</span>
+        <span class="nav-badge">120</span>
+      </a>
+      <a href="commands.html" class="nav-item">
+        <i class="fas fa-bolt"></i>
+        <span>Lệnh Bot</span>
+        <span class="nav-badge">48</span>
+      </a>
+      <a href="members.html" class="nav-item active">
+        <i class="fas fa-users"></i>
+        <span>Thành viên</span>
+      </a>
+
+      <div class="nav-section-label">Hệ thống</div>
+      <a href="stats.html" class="nav-item">
+        <i class="fas fa-chart-bar"></i>
+        <span>Thống kê</span>
+      </a>
+      <a href="security.html" class="nav-item">
+        <i class="fas fa-shield-heart"></i>
+        <span>Bảo mật</span>
+      </a>
+      <a href="logs.html" class="nav-item">
+        <i class="fas fa-clock-rotate-left"></i>
+        <span>Nhật ký</span>
+      </a>
+      <a href="settings.html" class="nav-item">
+        <i class="fas fa-cog"></i>
+        <span>Cài đặt</span>
+      </a>
+
+      <div class="sidebar-footer">
+        <div class="user-card">
+          <div class="user-avatar">
+            <img src="assets/img/avatar.jpg" alt="Avatar của Mynh" />
+          </div>
+          <div>
+            <div class="user-info-name">Mynh</div>
+            <div class="user-info-role">Owner • Admin</div>
+          </div>
         </div>
-
-        <div class="nav-section-label">Chính</div>
-        <a href="dashboard.html" class="nav-item">
-            <i class="fas fa-th-large"></i>
-            <span>Tổng quan</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-server"></i>
-            <span>Servers</span>
-            <span class="nav-badge">120</span>
-        </a>
-        <a href="commands.html" class="nav-item">
-            <i class="fas fa-bolt"></i>
-            <span>Lệnh Bot</span>
-            <span class="nav-badge">48</span>
-        </a>
-        <a href="members.html" class="nav-item active">
-            <i class="fas fa-users"></i>
-            <span>Thành viên</span>
-        </a>
-
-        <div class="nav-section-label">Hệ thống</div>
-        <a href="#" class="nav-item">
-            <i class="fas fa-chart-bar"></i>
-            <span>Thống kê</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-shield-heart"></i>
-            <span>Bảo mật</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-clock-rotate-left"></i>
-            <span>Nhật ký</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-cog"></i>
-            <span>Cài đặt</span>
-        </a>
-
-        <div class="sidebar-footer">
-            <div class="user-card">
-                <div class="user-avatar">
-                    <img src="assets/img/avatar.jpg" alt="Avatar của Mynh">
-                </div>
-                <div>
-                    <div class="user-info-name">Mynh</div>
-                    <div class="user-info-role">Owner • Admin</div>
-                </div>
-            </div>
-        </div>
+      </div>
     </aside>
 
     <main class="main">
-        <div class="main-scroll" id="mainScroll">
-
-            <div class="header-bar reveal">
-                <div class="header-left">
-                    <h1>Quản lý <span class="greeting-highlight">Thành viên</span> 👥</h1>
-                    <p>Xem và quản lý toàn bộ thành viên của MimiBot.</p>
-                </div>
-                <div class="header-right">
-                    <a href="index.html" class="header-btn back-btn">
-                        <i class="fas fa-arrow-left"></i> Quay lại
-                    </a>
-                    <button class="header-btn" aria-label="Thông báo">
-                        <i class="fas fa-bell"></i>
-                        <span class="notif-dot"></span>
-                    </button>
-                    <button class="header-btn" aria-label="Tìm kiếm">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Stats Overview -->
-            <div class="metrics-row">
-                <div class="metric-card reveal reveal-d1">
-                    <div class="metric-top">
-                        <div class="metric-icon rose">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <span class="metric-trend up"><i class="fas fa-arrow-up"></i> +2.4k</span>
-                    </div>
-                    <div class="metric-label">Tổng Thành viên</div>
-                    <div class="metric-value">45,000</div>
-                    <div class="metric-subtitle">Tăng 5.6% so với tuần trước</div>
-                </div>
-
-                <div class="metric-card reveal reveal-d2">
-                    <div class="metric-top">
-                        <div class="metric-icon green">
-                            <i class="fas fa-user-check"></i>
-                        </div>
-                        <span class="metric-trend up"><i class="fas fa-arrow-up"></i> +340</span>
-                    </div>
-                    <div class="metric-label">Thành viên mới</div>
-                    <div class="metric-value">1,245</div>
-                    <div class="metric-subtitle">Tuần này</div>
-                </div>
-
-                <div class="metric-card reveal reveal-d3">
-                    <div class="metric-top">
-                        <div class="metric-icon pink">
-                            <i class="fas fa-user-clock"></i>
-                        </div>
-                        <span class="metric-trend down"><i class="fas fa-arrow-down"></i> -120</span>
-                    </div>
-                    <div class="metric-label">Thành viên rời</div>
-                    <div class="metric-value">520</div>
-                    <div class="metric-subtitle">Tuần này</div>
-                </div>
-
-                <div class="metric-card reveal reveal-d4">
-                    <div class="metric-top">
-                        <div class="metric-icon magenta">
-                            <i class="fas fa-user-cog"></i>
-                        </div>
-                        <span class="metric-trend up"><i class="fas fa-arrow-up"></i> +8</span>
-                    </div>
-                    <div class="metric-label">Quản trị viên</div>
-                    <div class="metric-value">12</div>
-                    <div class="metric-subtitle">Đang hoạt động</div>
-                </div>
-            </div>
-
-            <!-- Members Toolbar -->
-            <div class="members-toolbar reveal">
-                <div class="toolbar-top">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="searchInput" placeholder="Tìm kiếm thành viên..." />
-                    </div>
-
-                    <div class="toolbar-actions">
-                        <button class="action-btn primary" id="addMemberBtn">
-                            <i class="fas fa-user-plus"></i>
-                            <span>Thêm thành viên</span>
-                        </button>
-                        <button class="action-btn">
-                            <i class="fas fa-download"></i>
-                            <span>Xuất Excel</span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="filter-group">
-                    <button class="filter-btn active" data-filter="all">
-                        <i class="fas fa-list"></i>
-                        Tất cả
-                    </button>
-                    <button class="filter-btn" data-filter="online">
-                        <i class="fas fa-circle"></i>
-                        Online
-                    </button>
-                    <button class="filter-btn" data-filter="offline">
-                        <i class="fas fa-circle"></i>
-                        Offline
-                    </button>
-                    <button class="filter-btn" data-filter="admin">
-                        <i class="fas fa-crown"></i>
-                        Admin
-                    </button>
-                    <button class="filter-btn" data-filter="mod">
-                        <i class="fas fa-shield"></i>
-                        Moderator
-                    </button>
-                    <button class="filter-btn" data-filter="new">
-                        <i class="fas fa-user-plus"></i>
-                        Mới
-                    </button>
-                </div>
-            </div>
-
-            <!-- Members Table -->
-            <div class="members-table-container reveal">
-                <div class="table-wrapper">
-                    <table class="members-table" id="membersTable">
-                        <thead>
-                            <tr>
-                                <th style="width: 8%;">ID</th>
-                                <th style="width: 25%;">Thành viên</th>
-                                <th style="width: 12%;">Trạng thái</th>
-                                <th style="width: 12%;">Vai trò</th>
-                                <th style="width: 15%;">Ngày tham gia</th>
-                                <th style="width: 12%;">Hoạt động</th>
-                                <th style="width: 16%;">Hành động</th>
-                            </tr>
-                        </thead>
-                        <tbody id="membersTableBody">
-                            <!-- Members will be inserted here -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination-container reveal">
-                <div class="pagination-info">
-                    <span>Hiển thị <strong id="pageStart">1</strong> - <strong id="pageEnd">8</strong> trong <strong
-                            id="totalMembers">0</strong> thành viên</span>
-                </div>
-
-                <div class="pagination-controls">
-                    <button class="pagination-btn" id="prevPage" aria-label="Trang trước">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-
-                    <div class="page-numbers" id="pageNumbers">
-                        <!-- Page numbers will be inserted here -->
-                    </div>
-
-                    <button class="pagination-btn" id="nextPage" aria-label="Trang tiếp theo">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-
+      <div class="main-scroll" id="mainScroll">
+        <div class="header-bar reveal">
+          <div class="header-left">
+            <h1>
+              Quản lý <span class="greeting-highlight">Thành viên</span> 👥
+            </h1>
+            <p>Xem và quản lý toàn bộ thành viên của MimiBot.</p>
+          </div>
+          <div class="header-right">
+            <a href="index.html" class="header-btn back-btn">
+              <i class="fas fa-arrow-left"></i> Quay lại
+            </a>
+            <button class="header-btn" aria-label="Thông báo">
+              <i class="fas fa-bell"></i>
+              <span class="notif-dot"></span>
+            </button>
+            <button class="header-btn" aria-label="Tìm kiếm">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
         </div>
+
+        <!-- Stats Overview -->
+        <div class="metrics-row">
+          <div class="metric-card reveal reveal-d1">
+            <div class="metric-top">
+              <div class="metric-icon rose">
+                <i class="fas fa-users"></i>
+              </div>
+              <span class="metric-trend up"
+                ><i class="fas fa-arrow-up"></i> +2.4k</span
+              >
+            </div>
+            <div class="metric-label">Tổng Thành viên</div>
+            <div class="metric-value">45,000</div>
+            <div class="metric-subtitle">Tăng 5.6% so với tuần trước</div>
+          </div>
+
+          <div class="metric-card reveal reveal-d2">
+            <div class="metric-top">
+              <div class="metric-icon green">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <span class="metric-trend up"
+                ><i class="fas fa-arrow-up"></i> +340</span
+              >
+            </div>
+            <div class="metric-label">Thành viên mới</div>
+            <div class="metric-value">1,245</div>
+            <div class="metric-subtitle">Tuần này</div>
+          </div>
+
+          <div class="metric-card reveal reveal-d3">
+            <div class="metric-top">
+              <div class="metric-icon pink">
+                <i class="fas fa-user-clock"></i>
+              </div>
+              <span class="metric-trend down"
+                ><i class="fas fa-arrow-down"></i> -120</span
+              >
+            </div>
+            <div class="metric-label">Thành viên rời</div>
+            <div class="metric-value">520</div>
+            <div class="metric-subtitle">Tuần này</div>
+          </div>
+
+          <div class="metric-card reveal reveal-d4">
+            <div class="metric-top">
+              <div class="metric-icon magenta">
+                <i class="fas fa-user-cog"></i>
+              </div>
+              <span class="metric-trend up"
+                ><i class="fas fa-arrow-up"></i> +8</span
+              >
+            </div>
+            <div class="metric-label">Quản trị viên</div>
+            <div class="metric-value">12</div>
+            <div class="metric-subtitle">Đang hoạt động</div>
+          </div>
+        </div>
+
+        <!-- Members Toolbar -->
+        <div class="members-toolbar reveal">
+          <div class="toolbar-top">
+            <div class="search-box">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Tìm kiếm thành viên..."
+              />
+            </div>
+
+            <div class="toolbar-actions">
+              <button class="action-btn primary" id="addMemberBtn">
+                <i class="fas fa-user-plus"></i>
+                <span>Thêm thành viên</span>
+              </button>
+              <button class="action-btn">
+                <i class="fas fa-download"></i>
+                <span>Xuất Excel</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">
+              <i class="fas fa-list"></i>
+              Tất cả
+            </button>
+            <button class="filter-btn" data-filter="online">
+              <i class="fas fa-circle"></i>
+              Online
+            </button>
+            <button class="filter-btn" data-filter="offline">
+              <i class="fas fa-circle"></i>
+              Offline
+            </button>
+            <button class="filter-btn" data-filter="admin">
+              <i class="fas fa-crown"></i>
+              Admin
+            </button>
+            <button class="filter-btn" data-filter="mod">
+              <i class="fas fa-shield"></i>
+              Moderator
+            </button>
+            <button class="filter-btn" data-filter="new">
+              <i class="fas fa-user-plus"></i>
+              Mới
+            </button>
+          </div>
+        </div>
+
+        <!-- Members Table -->
+        <div class="members-table-container reveal">
+          <div class="table-wrapper">
+            <table class="members-table" id="membersTable">
+              <thead>
+                <tr>
+                  <th style="width: 8%">ID</th>
+                  <th style="width: 25%">Thành viên</th>
+                  <th style="width: 12%">Trạng thái</th>
+                  <th style="width: 12%">Vai trò</th>
+                  <th style="width: 15%">Ngày tham gia</th>
+                  <th style="width: 12%">Hoạt động</th>
+                  <th style="width: 16%">Hành động</th>
+                </tr>
+              </thead>
+              <tbody id="membersTableBody">
+                <!-- Members will be inserted here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-container reveal">
+          <div class="pagination-info">
+            <span
+              >Hiển thị <strong id="pageStart">1</strong> -
+              <strong id="pageEnd">8</strong> trong
+              <strong id="totalMembers">0</strong> thành viên</span
+            >
+          </div>
+
+          <div class="pagination-controls">
+            <button
+              class="pagination-btn"
+              id="prevPage"
+              aria-label="Trang trước"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="page-numbers" id="pageNumbers">
+              <!-- Page numbers will be inserted here -->
+            </div>
+
+            <button
+              class="pagination-btn"
+              id="nextPage"
+              aria-label="Trang tiếp theo"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="assets/js/transition.js"></script>
     <script src="assets/js/members.js"></script>
-</body>
-
+  </body>
 </html>

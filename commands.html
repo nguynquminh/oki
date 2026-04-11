@@ -1,535 +1,560 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lệnh Bot - Admin Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/dashboard.css" />
     <link rel="stylesheet" href="assets/css/commands.css" />
     <link rel="stylesheet" href="assets/css/transition.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <canvas id="heartCanvas"></canvas>
     <div class="bokeh-layer">
-        <div class="bokeh"></div>
-        <div class="bokeh"></div>
-        <div class="bokeh"></div>
-        <div class="bokeh"></div>
-        <div class="bokeh"></div>
+      <div class="bokeh"></div>
+      <div class="bokeh"></div>
+      <div class="bokeh"></div>
+      <div class="bokeh"></div>
+      <div class="bokeh"></div>
     </div>
 
     <button class="mobile-toggle" id="mobileToggle">
-        <i class="fas fa-bars"></i>
+      <i class="fas fa-bars"></i>
     </button>
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <a href="index.html" class="sidebar-logo">
-                Mimi <span class="logo-heart">♥</span>
-            </a>
-            <div class="sidebar-version">v2.4.1 • Admin Panel</div>
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-logo">
+          Mimi <span class="logo-heart">♥</span>
+        </a>
+        <div class="sidebar-version">v2.4.1 • Admin Panel</div>
+      </div>
+
+      <div class="nav-section-label">Chính</div>
+      <a href="dashboard.html" class="nav-item">
+        <i class="fas fa-th-large"></i>
+        <span>Tổng quan</span>
+      </a>
+      <a href="servers.html" class="nav-item">
+        <i class="fas fa-server"></i>
+        <span>Servers</span>
+        <span class="nav-badge">120</span>
+      </a>
+      <a href="commands.html" class="nav-item active">
+        <i class="fas fa-bolt"></i>
+        <span>Lệnh Bot</span>
+        <span class="nav-badge">48</span>
+      </a>
+      <a href="members.html" class="nav-item">
+        <i class="fas fa-users"></i>
+        <span>Thành viên</span>
+      </a>
+
+      <div class="nav-section-label">Hệ thống</div>
+      <a href="stats.html" class="nav-item">
+        <i class="fas fa-chart-bar"></i>
+        <span>Thống kê</span>
+      </a>
+      <a href="security.html" class="nav-item">
+        <i class="fas fa-shield-heart"></i>
+        <span>Bảo mật</span>
+      </a>
+      <a href="logs.html" class="nav-item">
+        <i class="fas fa-clock-rotate-left"></i>
+        <span>Nhật ký</span>
+      </a>
+      <a href="settings.html" class="nav-item">
+        <i class="fas fa-cog"></i>
+        <span>Cài đặt</span>
+      </a>
+
+      <div class="sidebar-footer">
+        <div class="user-card">
+          <div class="user-avatar">
+            <img src="assets/img/avatar.jpg" alt="" />
+          </div>
+          <div>
+            <div class="user-info-name">Mynh</div>
+            <div class="user-info-role">Owner • Admin</div>
+          </div>
         </div>
-
-        <div class="nav-section-label">Chính</div>
-        <a href="dashboard.html" class="nav-item">
-            <i class="fas fa-th-large"></i>
-            <span>Tổng quan</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-server"></i>
-            <span>Servers</span>
-            <span class="nav-badge">120</span>
-        </a>
-        <a href="commands.html" class="nav-item active">
-            <i class="fas fa-bolt"></i>
-            <span>Lệnh Bot</span>
-            <span class="nav-badge">48</span>
-        </a>
-        <a href="members.html" class="nav-item">
-            <i class="fas fa-users"></i>
-            <span>Thành viên</span>
-        </a>
-
-        <div class="nav-section-label">Hệ thống</div>
-        <a href="#" class="nav-item">
-            <i class="fas fa-chart-bar"></i>
-            <span>Thống kê</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-shield-heart"></i>
-            <span>Bảo mật</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-clock-rotate-left"></i>
-            <span>Nhật ký</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-cog"></i>
-            <span>Cài đặt</span>
-        </a>
-
-        <div class="sidebar-footer">
-            <div class="user-card">
-                <div class="user-avatar">
-                    <img src="assets/img/avatar.jpg" alt="">
-                </div>
-                <div>
-                    <div class="user-info-name">Mynh</div>
-                    <div class="user-info-role">Owner • Admin</div>
-                </div>
-            </div>
-        </div>
+      </div>
     </aside>
 
     <main class="main">
-        <div class="main-scroll" id="mainScroll">
-
-            <div class="header-bar reveal">
-                <div class="header-left">
-                    <h1>Quản lý <span class="greeting-highlight">Lệnh Bot</span> ⚡</h1>
-                    <p>Xem và quản lý toàn bộ lệnh của MimiBot.</p>
-                </div>
-                <div class="header-right">
-                    <a href="index.html" class="header-btn back-btn">
-                        <i class="fas fa-arrow-left"></i> Quay lại
-                    </a>
-                    <button class="header-btn">
-                        <i class="fas fa-bell"></i>
-                        <span class="notif-dot"></span>
-                    </button>
-                    <button class="header-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Stats Overview -->
-            <div class="metrics-row">
-                <div class="metric-card reveal reveal-d1">
-                    <div class="metric-top">
-                        <div class="metric-icon magenta">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <span class="metric-trend up"><i class="fas fa-arrow-up"></i> +5</span>
-                    </div>
-                    <div class="metric-label">Tổng Lệnh</div>
-                    <div class="metric-value">48</div>
-                    <div class="metric-subtitle">Lệnh hoạt động</div>
-                </div>
-
-                <div class="metric-card reveal reveal-d2">
-                    <div class="metric-top">
-                        <div class="metric-icon green">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <span class="metric-trend up"><i class="fas fa-arrow-up"></i> 98.5%</span>
-                    </div>
-                    <div class="metric-label">Lệnh Hoạt Động</div>
-                    <div class="metric-value">47</div>
-                    <div class="metric-subtitle">1 lệnh đang bảo trì</div>
-                </div>
-
-                <div class="metric-card reveal reveal-d3">
-                    <div class="metric-top">
-                        <div class="metric-icon rose">
-                            <i class="fas fa-fire"></i>
-                        </div>
-                        <span class="metric-trend up"><i class="fas fa-arrow-up"></i> +2.3k</span>
-                    </div>
-                    <div class="metric-label">Lệnh Phổ Biến</div>
-                    <div class="metric-value">say</div>
-                    <div class="metric-subtitle">1.2k lần sử dụng</div>
-                </div>
-
-                <div class="metric-card reveal reveal-d4">
-                    <div class="metric-top">
-                        <div class="metric-icon pink">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <span class="metric-trend up"><i class="fas fa-arrow-up"></i> +340</span>
-                    </div>
-                    <div class="metric-label">Người Dùng Mới</div>
-                    <div class="metric-value">1,245</div>
-                    <div class="metric-subtitle">Tuần này</div>
-                </div>
-            </div>
-
-            <!-- Search & Filter Section -->
-            <div class="commands-toolbar reveal">
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="searchInput" placeholder="Tìm kiếm lệnh..." />
-                </div>
-
-                <div class="filter-group">
-                    <button class="filter-btn active" data-filter="all">
-                        <i class="fas fa-list"></i>
-                        Tất cả
-                    </button>
-                    <button class="filter-btn" data-filter="fun">
-                        <i class="fas fa-smile"></i>
-                        Vui
-                    </button>
-                    <button class="filter-btn" data-filter="utility">
-                        <i class="fas fa-wrench"></i>
-                        Tiện ích
-                    </button>
-                    <button class="filter-btn" data-filter="moderation">
-                        <i class="fas fa-shield"></i>
-                        Moderation
-                    </button>
-                    <button class="filter-btn" data-filter="music">
-                        <i class="fas fa-music"></i>
-                        Âm nhạc
-                    </button>
-                    <button class="filter-btn" data-filter="admin">
-                        <i class="fas fa-crown"></i>
-                        Admin
-                    </button>
-                </div>
-            </div>
-
-            <!-- Commands Grid -->
-            <div class="commands-grid" id="commandsGrid">
-
-                <!-- Command Card Template -->
-                <div class="command-card reveal" data-category="fun">
-                    <div class="command-header">
-                        <div class="command-title-block">
-                            <h3 class="command-name">say</h3>
-                            <span class="command-category">Vui</span>
-                        </div>
-                        <div class="command-status online">
-                            <span class="status-dot"></span>
-                            Online
-                        </div>
-                    </div>
-
-                    <p class="command-description">Làm bot lặp lại thông điệp của bạn. Lệnh vui nhộn và tương tác.</p>
-
-                    <div class="command-meta">
-                        <span class="meta-item">
-                            <i class="fas fa-code"></i>
-                            <span>/say [text]</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-users"></i>
-                            <span>1,245 lần</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-shield"></i>
-                            <span>Public</span>
-                        </span>
-                    </div>
-
-                    <div class="command-footer">
-                        <div class="command-tags">
-                            <span class="tag">vui nhộn</span>
-                            <span class="tag">chat</span>
-                        </div>
-                        <button class="cmd-action-btn">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="command-card reveal" data-category="utility">
-                    <div class="command-header">
-                        <div class="command-title-block">
-                            <h3 class="command-name">help</h3>
-                            <span class="command-category">Tiện ích</span>
-                        </div>
-                        <div class="command-status online">
-                            <span class="status-dot"></span>
-                            Online
-                        </div>
-                    </div>
-
-                    <p class="command-description">Hiển thị danh sách tất cả lệnh có sẵn và hướng dẫn sử dụng.</p>
-
-                    <div class="command-meta">
-                        <span class="meta-item">
-                            <i class="fas fa-code"></i>
-                            <span>/help [lệnh]</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-users"></i>
-                            <span>856 lần</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-shield"></i>
-                            <span>Public</span>
-                        </span>
-                    </div>
-
-                    <div class="command-footer">
-                        <div class="command-tags">
-                            <span class="tag">hướng dẫn</span>
-                            <span class="tag">thông tin</span>
-                        </div>
-                        <button class="cmd-action-btn">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="command-card reveal" data-category="moderation">
-                    <div class="command-header">
-                        <div class="command-title-block">
-                            <h3 class="command-name">ban</h3>
-                            <span class="command-category">Moderation</span>
-                        </div>
-                        <div class="command-status online">
-                            <span class="status-dot"></span>
-                            Online
-                        </div>
-                    </div>
-
-                    <p class="command-description">Ban một người dùng khỏi server. Chỉ dành cho quản trị viên.</p>
-
-                    <div class="command-meta">
-                        <span class="meta-item">
-                            <i class="fas fa-code"></i>
-                            <span>/ban [@user] [lý do]</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-users"></i>
-                            <span>342 lần</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-shield"></i>
-                            <span>Admin</span>
-                        </span>
-                    </div>
-
-                    <div class="command-footer">
-                        <div class="command-tags">
-                            <span class="tag">quản lý</span>
-                            <span class="tag">bảo mật</span>
-                        </div>
-                        <button class="cmd-action-btn">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="command-card reveal" data-category="music">
-                    <div class="command-header">
-                        <div class="command-title-block">
-                            <h3 class="command-name">play</h3>
-                            <span class="command-category">Âm nhạc</span>
-                        </div>
-                        <div class="command-status online">
-                            <span class="status-dot"></span>
-                            Online
-                        </div>
-                    </div>
-
-                    <p class="command-description">Phát nhạc từ YouTube, Spotify hoặc các nguồn âm thanh khác.</p>
-
-                    <div class="command-meta">
-                        <span class="meta-item">
-                            <i class="fas fa-code"></i>
-                            <span>/play [tên bài hát]</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-users"></i>
-                            <span>2,156 lần</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-shield"></i>
-                            <span>Public</span>
-                        </span>
-                    </div>
-
-                    <div class="command-footer">
-                        <div class="command-tags">
-                            <span class="tag">âm nhạc</span>
-                            <span class="tag">giải trí</span>
-                        </div>
-                        <button class="cmd-action-btn">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="command-card reveal" data-category="fun">
-                    <div class="command-header">
-                        <div class="command-title-block">
-                            <h3 class="command-name">dice</h3>
-                            <span class="command-category">Vui</span>
-                        </div>
-                        <div class="command-status online">
-                            <span class="status-dot"></span>
-                            Online
-                        </div>
-                    </div>
-
-                    <p class="command-description">Tung xúc xắc và lấy một số ngẫu nhiên từ 1 đến 6.</p>
-
-                    <div class="command-meta">
-                        <span class="meta-item">
-                            <i class="fas fa-code"></i>
-                            <span>/dice</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-users"></i>
-                            <span>723 lần</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-shield"></i>
-                            <span>Public</span>
-                        </span>
-                    </div>
-
-                    <div class="command-footer">
-                        <div class="command-tags">
-                            <span class="tag">ngẫu nhiên</span>
-                            <span class="tag">trò chơi</span>
-                        </div>
-                        <button class="cmd-action-btn">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="command-card reveal" data-category="admin">
-                    <div class="command-header">
-                        <div class="command-title-block">
-                            <h3 class="command-name">config</h3>
-                            <span class="command-category">Admin</span>
-                        </div>
-                        <div class="command-status online">
-                            <span class="status-dot"></span>
-                            Online
-                        </div>
-                    </div>
-
-                    <p class="command-description">Cấu hình các thiết lập của bot cho server của bạn.</p>
-
-                    <div class="command-meta">
-                        <span class="meta-item">
-                            <i class="fas fa-code"></i>
-                            <span>/config [tùy chọn]</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-users"></i>
-                            <span>234 lần</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-shield"></i>
-                            <span>Owner</span>
-                        </span>
-                    </div>
-
-                    <div class="command-footer">
-                        <div class="command-tags">
-                            <span class="tag">cấu hình</span>
-                            <span class="tag">quản lý</span>
-                        </div>
-                        <button class="cmd-action-btn">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="command-card reveal" data-category="moderation">
-                    <div class="command-header">
-                        <div class="command-title-block">
-                            <h3 class="command-name">kick</h3>
-                            <span class="command-category">Moderation</span>
-                        </div>
-                        <div class="command-status online">
-                            <span class="status-dot"></span>
-                            Online
-                        </div>
-                    </div>
-
-                    <p class="command-description">Đuổi một thành viên khỏi server. Chỉ dành cho quản trị viên.</p>
-
-                    <div class="command-meta">
-                        <span class="meta-item">
-                            <i class="fas fa-code"></i>
-                            <span>/kick [@user] [lý do]</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-users"></i>
-                            <span>421 lần</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-shield"></i>
-                            <span>Mod</span>
-                        </span>
-                    </div>
-
-                    <div class="command-footer">
-                        <div class="command-tags">
-                            <span class="tag">quản lý</span>
-                            <span class="tag">bảo mật</span>
-                        </div>
-                        <button class="cmd-action-btn">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="command-card reveal" data-category="utility">
-                    <div class="command-header">
-                        <div class="command-title-block">
-                            <h3 class="command-name">ping</h3>
-                            <span class="command-category">Tiện ích</span>
-                        </div>
-                        <div class="command-status online">
-                            <span class="status-dot"></span>
-                            Online
-                        </div>
-                    </div>
-
-                    <p class="command-description">Kiểm tra độ trễ (ping) và tốc độ phản ứng của bot.</p>
-
-                    <div class="command-meta">
-                        <span class="meta-item">
-                            <i class="fas fa-code"></i>
-                            <span>/ping</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-users"></i>
-                            <span>1,823 lần</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-shield"></i>
-                            <span>Public</span>
-                        </span>
-                    </div>
-
-                    <div class="command-footer">
-                        <div class="command-tags">
-                            <span class="tag">thông tin</span>
-                            <span class="tag">hệ thống</span>
-                        </div>
-                        <button class="cmd-action-btn">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
+      <div class="main-scroll" id="mainScroll">
+        <div class="header-bar reveal">
+          <div class="header-left">
+            <h1>Quản lý <span class="greeting-highlight">Lệnh Bot</span> ⚡</h1>
+            <p>Xem và quản lý toàn bộ lệnh của MimiBot.</p>
+          </div>
+          <div class="header-right">
+            <a href="index.html" class="header-btn back-btn">
+              <i class="fas fa-arrow-left"></i> Quay lại
+            </a>
+            <button class="header-btn">
+              <i class="fas fa-bell"></i>
+              <span class="notif-dot"></span>
+            </button>
+            <button class="header-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
         </div>
+
+        <!-- Stats Overview -->
+        <div class="metrics-row">
+          <div class="metric-card reveal reveal-d1">
+            <div class="metric-top">
+              <div class="metric-icon magenta">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <span class="metric-trend up"
+                ><i class="fas fa-arrow-up"></i> +5</span
+              >
+            </div>
+            <div class="metric-label">Tổng Lệnh</div>
+            <div class="metric-value">48</div>
+            <div class="metric-subtitle">Lệnh hoạt động</div>
+          </div>
+
+          <div class="metric-card reveal reveal-d2">
+            <div class="metric-top">
+              <div class="metric-icon green">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <span class="metric-trend up"
+                ><i class="fas fa-arrow-up"></i> 98.5%</span
+              >
+            </div>
+            <div class="metric-label">Lệnh Hoạt Động</div>
+            <div class="metric-value">47</div>
+            <div class="metric-subtitle">1 lệnh đang bảo trì</div>
+          </div>
+
+          <div class="metric-card reveal reveal-d3">
+            <div class="metric-top">
+              <div class="metric-icon rose">
+                <i class="fas fa-fire"></i>
+              </div>
+              <span class="metric-trend up"
+                ><i class="fas fa-arrow-up"></i> +2.3k</span
+              >
+            </div>
+            <div class="metric-label">Lệnh Phổ Biến</div>
+            <div class="metric-value">say</div>
+            <div class="metric-subtitle">1.2k lần sử dụng</div>
+          </div>
+
+          <div class="metric-card reveal reveal-d4">
+            <div class="metric-top">
+              <div class="metric-icon pink">
+                <i class="fas fa-users"></i>
+              </div>
+              <span class="metric-trend up"
+                ><i class="fas fa-arrow-up"></i> +340</span
+              >
+            </div>
+            <div class="metric-label">Người Dùng Mới</div>
+            <div class="metric-value">1,245</div>
+            <div class="metric-subtitle">Tuần này</div>
+          </div>
+        </div>
+
+        <!-- Search & Filter Section -->
+        <div class="commands-toolbar reveal">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Tìm kiếm lệnh..."
+            />
+          </div>
+
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">
+              <i class="fas fa-list"></i>
+              Tất cả
+            </button>
+            <button class="filter-btn" data-filter="fun">
+              <i class="fas fa-smile"></i>
+              Vui
+            </button>
+            <button class="filter-btn" data-filter="utility">
+              <i class="fas fa-wrench"></i>
+              Tiện ích
+            </button>
+            <button class="filter-btn" data-filter="moderation">
+              <i class="fas fa-shield"></i>
+              Moderation
+            </button>
+            <button class="filter-btn" data-filter="music">
+              <i class="fas fa-music"></i>
+              Âm nhạc
+            </button>
+            <button class="filter-btn" data-filter="admin">
+              <i class="fas fa-crown"></i>
+              Admin
+            </button>
+          </div>
+        </div>
+
+        <!-- Commands Grid -->
+        <div class="commands-grid" id="commandsGrid">
+          <!-- Command Card Template -->
+          <div class="command-card reveal" data-category="fun">
+            <div class="command-header">
+              <div class="command-title-block">
+                <h3 class="command-name">say</h3>
+                <span class="command-category">Vui</span>
+              </div>
+              <div class="command-status online">
+                <span class="status-dot"></span>
+                Online
+              </div>
+            </div>
+
+            <p class="command-description">
+              Làm bot lặp lại thông điệp của bạn. Lệnh vui nhộn và tương tác.
+            </p>
+
+            <div class="command-meta">
+              <span class="meta-item">
+                <i class="fas fa-code"></i>
+                <span>/say [text]</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>1,245 lần</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-shield"></i>
+                <span>Public</span>
+              </span>
+            </div>
+
+            <div class="command-footer">
+              <div class="command-tags">
+                <span class="tag">vui nhộn</span>
+                <span class="tag">chat</span>
+              </div>
+              <button class="cmd-action-btn">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="command-card reveal" data-category="utility">
+            <div class="command-header">
+              <div class="command-title-block">
+                <h3 class="command-name">help</h3>
+                <span class="command-category">Tiện ích</span>
+              </div>
+              <div class="command-status online">
+                <span class="status-dot"></span>
+                Online
+              </div>
+            </div>
+
+            <p class="command-description">
+              Hiển thị danh sách tất cả lệnh có sẵn và hướng dẫn sử dụng.
+            </p>
+
+            <div class="command-meta">
+              <span class="meta-item">
+                <i class="fas fa-code"></i>
+                <span>/help [lệnh]</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>856 lần</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-shield"></i>
+                <span>Public</span>
+              </span>
+            </div>
+
+            <div class="command-footer">
+              <div class="command-tags">
+                <span class="tag">hướng dẫn</span>
+                <span class="tag">thông tin</span>
+              </div>
+              <button class="cmd-action-btn">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="command-card reveal" data-category="moderation">
+            <div class="command-header">
+              <div class="command-title-block">
+                <h3 class="command-name">ban</h3>
+                <span class="command-category">Moderation</span>
+              </div>
+              <div class="command-status online">
+                <span class="status-dot"></span>
+                Online
+              </div>
+            </div>
+
+            <p class="command-description">
+              Ban một người dùng khỏi server. Chỉ dành cho quản trị viên.
+            </p>
+
+            <div class="command-meta">
+              <span class="meta-item">
+                <i class="fas fa-code"></i>
+                <span>/ban [@user] [lý do]</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>342 lần</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-shield"></i>
+                <span>Admin</span>
+              </span>
+            </div>
+
+            <div class="command-footer">
+              <div class="command-tags">
+                <span class="tag">quản lý</span>
+                <span class="tag">bảo mật</span>
+              </div>
+              <button class="cmd-action-btn">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="command-card reveal" data-category="music">
+            <div class="command-header">
+              <div class="command-title-block">
+                <h3 class="command-name">play</h3>
+                <span class="command-category">Âm nhạc</span>
+              </div>
+              <div class="command-status online">
+                <span class="status-dot"></span>
+                Online
+              </div>
+            </div>
+
+            <p class="command-description">
+              Phát nhạc từ YouTube, Spotify hoặc các nguồn âm thanh khác.
+            </p>
+
+            <div class="command-meta">
+              <span class="meta-item">
+                <i class="fas fa-code"></i>
+                <span>/play [tên bài hát]</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>2,156 lần</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-shield"></i>
+                <span>Public</span>
+              </span>
+            </div>
+
+            <div class="command-footer">
+              <div class="command-tags">
+                <span class="tag">âm nhạc</span>
+                <span class="tag">giải trí</span>
+              </div>
+              <button class="cmd-action-btn">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="command-card reveal" data-category="fun">
+            <div class="command-header">
+              <div class="command-title-block">
+                <h3 class="command-name">dice</h3>
+                <span class="command-category">Vui</span>
+              </div>
+              <div class="command-status online">
+                <span class="status-dot"></span>
+                Online
+              </div>
+            </div>
+
+            <p class="command-description">
+              Tung xúc xắc và lấy một số ngẫu nhiên từ 1 đến 6.
+            </p>
+
+            <div class="command-meta">
+              <span class="meta-item">
+                <i class="fas fa-code"></i>
+                <span>/dice</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>723 lần</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-shield"></i>
+                <span>Public</span>
+              </span>
+            </div>
+
+            <div class="command-footer">
+              <div class="command-tags">
+                <span class="tag">ngẫu nhiên</span>
+                <span class="tag">trò chơi</span>
+              </div>
+              <button class="cmd-action-btn">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="command-card reveal" data-category="admin">
+            <div class="command-header">
+              <div class="command-title-block">
+                <h3 class="command-name">config</h3>
+                <span class="command-category">Admin</span>
+              </div>
+              <div class="command-status online">
+                <span class="status-dot"></span>
+                Online
+              </div>
+            </div>
+
+            <p class="command-description">
+              Cấu hình các thiết lập của bot cho server của bạn.
+            </p>
+
+            <div class="command-meta">
+              <span class="meta-item">
+                <i class="fas fa-code"></i>
+                <span>/config [tùy chọn]</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>234 lần</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-shield"></i>
+                <span>Owner</span>
+              </span>
+            </div>
+
+            <div class="command-footer">
+              <div class="command-tags">
+                <span class="tag">cấu hình</span>
+                <span class="tag">quản lý</span>
+              </div>
+              <button class="cmd-action-btn">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="command-card reveal" data-category="moderation">
+            <div class="command-header">
+              <div class="command-title-block">
+                <h3 class="command-name">kick</h3>
+                <span class="command-category">Moderation</span>
+              </div>
+              <div class="command-status online">
+                <span class="status-dot"></span>
+                Online
+              </div>
+            </div>
+
+            <p class="command-description">
+              Đuổi một thành viên khỏi server. Chỉ dành cho quản trị viên.
+            </p>
+
+            <div class="command-meta">
+              <span class="meta-item">
+                <i class="fas fa-code"></i>
+                <span>/kick [@user] [lý do]</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>421 lần</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-shield"></i>
+                <span>Mod</span>
+              </span>
+            </div>
+
+            <div class="command-footer">
+              <div class="command-tags">
+                <span class="tag">quản lý</span>
+                <span class="tag">bảo mật</span>
+              </div>
+              <button class="cmd-action-btn">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="command-card reveal" data-category="utility">
+            <div class="command-header">
+              <div class="command-title-block">
+                <h3 class="command-name">ping</h3>
+                <span class="command-category">Tiện ích</span>
+              </div>
+              <div class="command-status online">
+                <span class="status-dot"></span>
+                Online
+              </div>
+            </div>
+
+            <p class="command-description">
+              Kiểm tra độ trễ (ping) và tốc độ phản ứng của bot.
+            </p>
+
+            <div class="command-meta">
+              <span class="meta-item">
+                <i class="fas fa-code"></i>
+                <span>/ping</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>1,823 lần</span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-shield"></i>
+                <span>Public</span>
+              </span>
+            </div>
+
+            <div class="command-footer">
+              <div class="command-tags">
+                <span class="tag">thông tin</span>
+                <span class="tag">hệ thống</span>
+              </div>
+              <button class="cmd-action-btn">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="assets/js/transition.js"></script>
     <script src="assets/js/commands.js"></script>
-</body>
-
+  </body>
 </html>

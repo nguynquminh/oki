@@ -28,7 +28,8 @@ export default function GlassModal({ isOpen, onClose, title, children }) {
                             <h3 className="text-xl font-bold text-white">{title}</h3>
                             <button 
                                 onClick={onClose}
-                                className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                                aria-label="Đóng"
+                                className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors focus-visible:ring-2 focus-visible:ring-gaming-500 focus:outline-none"
                             >
                                 <X className="w-6 h-6" />
                             </button>

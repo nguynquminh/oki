@@ -18,7 +18,10 @@ async function connectDatabase() {
 
         logger.info('[MongoDB] Đang kết nối...');
 
-        const mongoUri = process.env.MONGODB_URI || 'mongodb+srv://mikubaka2608_db_user:[EMAIL_ADDRESS]/?appName=study';
+        const mongoUri = process.env.MONGODB_URI;
+        if (!mongoUri) {
+            throw new Error('MONGODB_URI environment variable is not defined. Failing securely.');
+        }
 
         await mongoose.connect(mongoUri, {
             serverSelectionTimeoutMS: 30000,
@@ -49,7 +52,7 @@ async function connectDatabase() {
         await new Promise(resolve => setTimeout(resolve, 5000));
 
         try {
-            await mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mikubaka2608_db_user:dPjhprrFZPK0jwVU@study.ub3rvhz.mongodb.net/', {
+            await mongoose.connect(process.env.MONGODB_URI, {
                 serverSelectionTimeoutMS: 30000,
                 connectTimeoutMS: 30000,
                 socketTimeoutMS: 60000,

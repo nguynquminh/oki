@@ -138,6 +138,71 @@ module.exports = {
 
             // Flatten the results and filter out nulls to maintain deterministic ordering within the chunk
             channels.push(...chunkResults.flat().filter(Boolean));
+            const baseOverwrites = [
+                {
+                    id: guild.id,
+                    deny: [PermissionFlagsBits.ViewChannel],
+                },
+                {
+                    id: hostId,
+                    allow: [
+                        PermissionFlagsBits.ViewChannel,
+                        PermissionFlagsBits.SendMessages,
+                        PermissionFlagsBits.ReadMessageHistory,
+                    ],
+                },
+                {
+                    id: guild.client.user.id,
+                    allow: [
+                        PermissionFlagsBits.ViewChannel,
+                        PermissionFlagsBits.SendMessages,
+                        PermissionFlagsBits.ReadMessageHistory,
+                        PermissionFlagsBits.ManageChannels,
+                        PermissionFlagsBits.Connect,
+                        PermissionFlagsBits.Speak,
+                    ],
+                },
+                ...memberOverwrites,
+            ];
+
+            // ⚡ Bolt: Create text and voice channels concurrently per team
+            const [textCh, voiceCh] = await Promise.all([
+                guild.channels.create({
+                    name: `nhóm-${teamIdx}-chat`,
+                    type: ChannelType.GuildText,
+                    parent: category.id,
+                    permissionOverwrites: baseOverwrites,
+                    topic: `Kênh chat của Nhóm ${teamIdx} • Sự kiện: ${eventName}`,
+                }),
+                guild.channels.create({
+                    name: `Nhóm ${teamIdx} Voice`,
+                    type: ChannelType.GuildVoice,
+                    parent: category.id,
+                    permissionOverwrites: baseOverwrites,
+                })
+            ]);
+
+            // Gửi tin chào mừng
+            const memberMentions = memberIds.map((id) => `<@${id}>`).join(', ');
+            await textCh.send({
+                embeds: [
+                    {
+                        title: `👋 Chào mừng đến Nhóm ${teamIdx}!`,
+                        description: `**Thành viên:** ${memberMentions}\n\n`
+                            + `Đây là kênh riêng của nhóm. Hãy phối hợp với nhau tại đây.\n`
+                            + `🔊 Voice channel: <#${voiceCh.id}>\n\n`
+                            + `Chúc may mắn! 🍀`,
+                        color: 0x57f287,
+                    },
+                ],
+            });
+
+            channels.push(
+                { id: textCh.id, type: 'text', teamIndex: parseInt(teamIdx) },
+                { id: voiceCh.id, type: 'voice', teamIndex: parseInt(teamIdx) },
+            );
+
+            logger.info(`[ChannelService] Created channels for team ${teamIdx}: text=${textCh.id}, voice=${voiceCh.id}`);
         }
 
         return { categoryId: category.id, channels };
@@ -159,6 +224,12 @@ module.exports = {
             const chunk = channelsToProcess.slice(i, i + chunkSize);
 
             const results = await Promise.all(chunk.map(async (ch) => {
+        // ⚡ Bolt: Chunked channel deletion to avoid Discord API rate limits (HTTP 429)
+        const results = [];
+        const chunkSize = 3;
+        for (let i = 0; i < state.createdChannels.length; i += chunkSize) {
+            const chunk = state.createdChannels.slice(i, i + chunkSize);
+            const chunkPromises = chunk.map(async (ch) => {
                 try {
                     const channel = await guild.channels.fetch(ch.id).catch(() => null);
                     if (channel) {
@@ -174,6 +245,11 @@ module.exports = {
             successfulDeletes += results.filter(Boolean).length;
         }
         deletedCount = successfulDeletes;
+            });
+            const chunkResults = await Promise.all(chunkPromises);
+            results.push(...chunkResults);
+        }
+        deletedCount = results.filter(Boolean).length;
 
         if (state.categoryId) {
             try {

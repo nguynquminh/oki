@@ -7,6 +7,8 @@ export default function Navbar({ onMenuClick }) {
                 <div className="flex items-center gap-3">
                     <button
                         onClick={onMenuClick}
+                        className="lg:hidden p-2 hover:bg-slate-800 rounded-lg transition-colors"
+                        aria-label="Toggle menu"
                         aria-label="Mở menu"
                         className="lg:hidden p-2 hover:bg-slate-800 rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-gaming-500 focus:outline-none"
                     >

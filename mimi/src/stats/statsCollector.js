@@ -1,6 +1,6 @@
 const logger = require('../utils/logger');
 const GuildStats = require('../database/models/GuildStats');
-const DailyStats = require('../database/models/DailyStats');
+const dailyStats = require('../database/models/dailyStats');
 
 class StatsCollector {
     constructor() {
@@ -25,8 +25,8 @@ class StatsCollector {
             await GuildStats.updateStats(guildId, { totalMessages: 1 });
 
             const today = this._getDateKey(new Date());
-            await DailyStats.findOrCreate(guildId, today);
-            await DailyStats.updateStats(guildId, today, { messages: 1 });
+            await dailyStats.findOrCreate(guildId, today);
+            await dailyStats.updateStats(guildId, today, { messages: 1 });
 
             logger.debug(`📝 Message recorded for guild ${guildId}`);
         } catch (err) {
@@ -40,7 +40,7 @@ class StatsCollector {
         try {
             await GuildStats.findOrCreate(guildId);
             const today = this._getDateKey(new Date());
-            await DailyStats.findOrCreate(guildId, today);
+            await dailyStats.findOrCreate(guildId, today);
             logger.debug(`⚙️  Command recorded for guild ${guildId}`);
         } catch (err) {
             logger.error('Error incrementing command:', err);
@@ -55,8 +55,8 @@ class StatsCollector {
             await GuildStats.updateStats(guildId, { totalJoins: 1 });
 
             const today = this._getDateKey(new Date());
-            await DailyStats.findOrCreate(guildId, today);
-            await DailyStats.updateStats(guildId, today, { joins: 1 });
+            await dailyStats.findOrCreate(guildId, today);
+            await dailyStats.updateStats(guildId, today, { joins: 1 });
 
             logger.debug(`👋 Join recorded for guild ${guildId}`);
         } catch (err) {
@@ -72,8 +72,8 @@ class StatsCollector {
             await GuildStats.updateStats(guildId, { totalLeaves: 1 });
 
             const today = this._getDateKey(new Date());
-            await DailyStats.findOrCreate(guildId, today);
-            await DailyStats.updateStats(guildId, today, { leaves: 1 });
+            await dailyStats.findOrCreate(guildId, today);
+            await dailyStats.updateStats(guildId, today, { leaves: 1 });
 
             logger.debug(`👋 Leave recorded for guild ${guildId}`);
         } catch (err) {
@@ -147,7 +147,7 @@ class StatsCollector {
 
         try {
             const dailyStats = guildId
-                ? await DailyStats.getLastDays(guildId, 14)
+                ? await dailyStats.getLastDays(guildId, 14)
                 : [];
 
             for (let i = 6; i >= 0; i--) {

@@ -256,25 +256,28 @@ async function createRoles(guild) {
 
         let createdCount = 0;
 
-        // ========== Tạo roles lần lượt (tránh rate limit) ==========
-        for (const roleTemplate of roleTemplates) {
-            try {
-                await guild.roles.create({
-                    name: roleTemplate.name,
-                    color: roleTemplate.color,
-                    permissions: roleTemplate.permissions,
-                    reason: 'Server Setup Command',
-                });
+        // ========== Tạo roles đồng thời (có delay nhỏ) ==========
+        const createRolePromises = roleTemplates.map((roleTemplate, index) => {
+            return new Promise(async (resolve) => {
+                // Stagger requests by 200ms to avoid burst rate limits
+                if (index > 0) await new Promise(r => setTimeout(r, index * 200));
+                try {
+                    await guild.roles.create({
+                        name: roleTemplate.name,
+                        color: roleTemplate.color,
+                        permissions: roleTemplate.permissions,
+                        reason: 'Server Setup Command',
+                    });
+                    resolve({ success: true, name: roleTemplate.name });
+                } catch (error) {
+                    console.error(`Lỗi tạo role ${roleTemplate.name}:`, error.message);
+                    resolve({ success: false, name: roleTemplate.name, error });
+                }
+            });
+        });
 
-                createdCount++;
-
-                // ========== Delay 500ms giữa mỗi lần tạo để tránh rate limit ==========
-                await new Promise((resolve) => setTimeout(resolve, 500));
-
-            } catch (error) {
-                console.error(`Lỗi tạo role ${roleTemplate.name}:`, error.message);
-            }
-        }
+        const results = await Promise.all(createRolePromises);
+        createdCount = results.filter(r => r.success).length;
 
         if (createdCount === 0) {
             return {
@@ -341,49 +344,42 @@ async function createChannelsAndCategories(guild) {
 
         let createdCount = 0;
 
-        // ========== Tạo Categories và Channels lần lượt ==========
-        for (const structure of serverStructure) {
+        // ========== Tạo Categories lần lượt, Channels trong Category thì đồng thời ==========
+        for (let i = 0; i < serverStructure.length; i++) {
+            const structure = serverStructure[i];
             try {
-                // ========== Bước 1: Tạo Category ==========
                 const category = await guild.channels.create({
                     name: structure.categoryName,
                     type: ChannelType.GuildCategory,
                     reason: 'Server Setup Command',
                 });
-
                 createdCount++;
 
-                // ========== Delay 500ms ==========
-                await new Promise((resolve) => setTimeout(resolve, 500));
+                if (i < serverStructure.length - 1) await new Promise(r => setTimeout(r, 200));
 
-                // ========== Bước 2: Tạo Channels trong Category ==========
-                for (const channel of structure.channels) {
-                    try {
-                        await guild.channels.create({
-                            name: channel.name,
-                            type: channel.type,
-                            parent: category.id, // Nhét vào Category vừa tạo
-                            reason: 'Server Setup Command',
-                        });
+                const createChannelPromises = structure.channels.map((channel, idx) => {
+                    return new Promise(async (resolve) => {
+                        if (idx > 0) await new Promise(r => setTimeout(r, idx * 100)); // Stagger slightly
+                        try {
+                            await guild.channels.create({
+                                name: channel.name,
+                                type: channel.type,
+                                parent: category.id,
+                                reason: 'Server Setup Command',
+                            });
+                            resolve({ success: true });
+                        } catch (error) {
+                            console.error(`Lỗi tạo channel ${channel.name}:`, error.message);
+                            resolve({ success: false });
+                        }
+                    });
+                });
 
-                        createdCount++;
-
-                        // ========== Delay 500ms giữa mỗi channel ==========
-                        await new Promise((resolve) => setTimeout(resolve, 500));
-
-                    } catch (error) {
-                        console.error(
-                            `Lỗi tạo channel ${channel.name}:`,
-                            error.message
-                        );
-                    }
-                }
+                const channelResults = await Promise.all(createChannelPromises);
+                createdCount += channelResults.filter(r => r.success).length;
 
             } catch (error) {
-                console.error(
-                    `Lỗi tạo category ${structure.categoryName}:`,
-                    error.message
-                );
+                console.error(`Lỗi tạo category ${structure.categoryName}:`, error.message);
             }
         }
 

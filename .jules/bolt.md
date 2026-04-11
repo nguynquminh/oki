@@ -1,0 +1,3 @@
+## 2024-05-24 - Discord API Rate Limit vs Parallelization
+**Learning:** Parallelizing channel operations via un-chunked `Promise.all` can cause HTTP 429 rate limit errors from the Discord API. However, doing things fully sequentially ignores opportunities to parallelize non-conflicting tasks, such as creating independent voice and text channels.
+**Action:** When working with the Discord API, optimize by using bounded concurrency (like processing requests in chunks of 3-5) and concurrently awaiting structurally independent calls (e.g., creating a team's voice and text channels together), avoiding unconstrained `Promise.all` over large arrays.

@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>nguynquminh</title>
@@ -10,550 +9,790 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <link rel="prefetch" href="dashboard.html" as="document" />
-</head>
+  </head>
 
-<body>
-
+  <body>
     <canvas id="heart-canvas"></canvas>
 
     <nav class="navbar" id="navbar">
-        <div class="navbar-inner">
-            <a href="#hero" class="nav-logo">
-                qminh <span class="heart-icon">♥</span>
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact" class="nav-cta">Contact 💌</a></li>
-            </ul>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
+      <div class="navbar-inner">
+        <a href="#hero" class="nav-logo">
+          qminh <span class="heart-icon">♥</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact" class="nav-cta">Contact 💌</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-badge">
-                    <span class="dot"></span>
-                    Always ready for a new project
-                </div>
-                <h1 class="hero-title">
-                    Hi, I'm<br />
-                    <span class="highlight">qminh</span> <span class="heart-emoji">💖</span>
-                </h1>
-                <p class="hero-description">
-                    Hi! I'm a designer & developer, passionate about creating beautiful, refined, and inspiring digital
-                    products.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Explore projects</a>
-                    <a href="#contact" class="btn btn-secondary">Contact me</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-avatar-wrapper">
-                    <div class="hero-avatar-bg"></div>
-                    <div class="hero-avatar-ring"></div>
-                    <div class="hero-avatar">
-                        <img src="./assets/img/avatar.jpg" class="hero-avatar-img" alt="minhonyeu">
-                    </div>
-                    <div class="hero-floating-card card-1">
-                        <div class="floating-icon pink">🎨</div>
-                        <div><strong>UI/UX Design</strong><br /><small style="color:var(--charcoal-light)">Figma &
-                                Adobe</small></div>
-                    </div>
-                    <div class="hero-floating-card card-2">
-                        <div class="floating-icon rose">💻</div>
-                        <div><strong>Frontend Dev</strong><br /><small style="color:var(--charcoal-light)">React &
-                                Vue</small></div>
-                    </div>
-                    <div class="hero-floating-card card-3">
-                        <div class="floating-icon pink">❤️</div>
-                        <div><strong>100% cute</strong></div>
-                    </div>
-                </div>
-            </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Always ready for a new project
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm<br />
+            <span class="highlight">qminh</span>
+            <span class="heart-emoji">💖</span>
+          </h1>
+          <p class="hero-description">
+            Hi! I'm a designer & developer, passionate about creating beautiful,
+            refined, and inspiring digital products.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Explore projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact me</a>
+          </div>
         </div>
+        <div class="hero-visual">
+          <div class="hero-avatar-wrapper">
+            <div class="hero-avatar-bg"></div>
+            <div class="hero-avatar-ring"></div>
+            <div class="hero-avatar">
+              <img
+                src="./assets/img/avatar.jpg"
+                class="hero-avatar-img"
+                alt="minhonyeu"
+              />
+            </div>
+            <div class="hero-floating-card card-1">
+              <div class="floating-icon pink">🎨</div>
+              <div>
+                <strong>UI/UX Design</strong><br /><small
+                  style="color: var(--charcoal-light)"
+                  >Figma & Adobe</small
+                >
+              </div>
+            </div>
+            <div class="hero-floating-card card-2">
+              <div class="floating-icon rose">💻</div>
+              <div>
+                <strong>Frontend Dev</strong><br /><small
+                  style="color: var(--charcoal-light)"
+                  >React & Vue</small
+                >
+              </div>
+            </div>
+            <div class="hero-floating-card card-3">
+              <div class="floating-icon pink">❤️</div>
+              <div><strong>100% cute</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="about" id="about">
-        <div class="section-container">
-            <div class="about-grid">
-                <div class="about-image-wrapper reveal">
-                    <div class="about-image">
-                        <img src="./assets/img/arisu2.png" class="about-image-inner" alt="minhonyeu">
-                    </div>
-                    <div class="about-image-decoration"></div>
-                </div>
-                <div class="about-content">
-                    <div class="reveal">
-                        <span class="section-label">💕 About me</span>
-                        <h2 class="section-title">About me</h2>
-                        <p class="section-subtitle">
-                            With over 2 years of experience, I believe that every pixel has meaning. I love the
-                            combination of art and technology to create digital experiences that touch the heart.
-                        </p>
-                    </div>
-                    <div class="about-features">
-                        <div class="about-feature reveal reveal-delay-1">
-                            <div class="about-feature-icon">💗</div>
-                            <div class="about-feature-text">
-                                <h4>Design with heart</h4>
-                                <p>I always put my heart into every project I work on.</p>
-                            </div>
-                        </div>
-                        <div class="about-feature reveal reveal-delay-2">
-                            <div class="about-feature-icon">🎯</div>
-                            <div class="about-feature-text">
-                                <h4>User-centric</h4>
-                                <p>I always put the user experience at the center of every decision.</p>
-                            </div>
-                        </div>
-                        <div class="about-feature reveal reveal-delay-3">
-                            <div class="about-feature-icon">🌟</div>
-                            <div class="about-feature-text">
-                                <h4>Always update with the latest trends</h4>
-                                <p>I always keep up with the latest trends in design and technology.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-stats reveal reveal-delay-4">
-                        <div class="stat-item">
-                            <div class="stat-number">2+</div>
-                            <div class="stat-label">Year of experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Projects completed</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">200+</div>
-                            <div class="stat-label">Happy clients</div>
-                        </div>
-                    </div>
-                </div>
+      <div class="section-container">
+        <div class="about-grid">
+          <div class="about-image-wrapper reveal">
+            <div class="about-image">
+              <img
+                src="./assets/img/arisu2.png"
+                class="about-image-inner"
+                alt="minhonyeu"
+              />
             </div>
+            <div class="about-image-decoration"></div>
+          </div>
+          <div class="about-content">
+            <div class="reveal">
+              <span class="section-label">💕 About me</span>
+              <h2 class="section-title">About me</h2>
+              <p class="section-subtitle">
+                With over 2 years of experience, I believe that every pixel has
+                meaning. I love the combination of art and technology to create
+                digital experiences that touch the heart.
+              </p>
+            </div>
+            <div class="about-features">
+              <div class="about-feature reveal reveal-delay-1">
+                <div class="about-feature-icon">💗</div>
+                <div class="about-feature-text">
+                  <h4>Design with heart</h4>
+                  <p>I always put my heart into every project I work on.</p>
+                </div>
+              </div>
+              <div class="about-feature reveal reveal-delay-2">
+                <div class="about-feature-icon">🎯</div>
+                <div class="about-feature-text">
+                  <h4>User-centric</h4>
+                  <p>
+                    I always put the user experience at the center of every
+                    decision.
+                  </p>
+                </div>
+              </div>
+              <div class="about-feature reveal reveal-delay-3">
+                <div class="about-feature-icon">🌟</div>
+                <div class="about-feature-text">
+                  <h4>Always update with the latest trends</h4>
+                  <p>
+                    I always keep up with the latest trends in design and
+                    technology.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="about-stats reveal reveal-delay-4">
+              <div class="stat-item">
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Year of experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Projects completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Happy clients</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="skills" id="skills">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-label">💝 Skills</span>
-                <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">The tools I use every day to turn ideas into reality.</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card reveal reveal-delay-1">
-                    <div class="skill-icon">🎨</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Designing intuitive interfaces that create smooth and emotional experiences.</p>
-                    <div class="skill-tags"><span class="skill-tag">Figma</span><span class="skill-tag">Adobe
-                            XD</span><span class="skill-tag">Prototyping</span></div>
-                </div>
-                <div class="skill-card reveal reveal-delay-2">
-                    <div class="skill-icon">💻</div>
-                    <h3>Frontend Development</h3>
-                    <p>Building modern, responsive, and high-performance web interfaces.</p>
-                    <div class="skill-tags"><span class="skill-tag">React</span><span
-                            class="skill-tag">Vue.js</span><span class="skill-tag">Tailwind CSS</span></div>
-                </div>
-                <div class="skill-card reveal reveal-delay-3">
-                    <div class="skill-icon">📱</div>
-                    <h3>Mobile Design</h3>
-                    <p>Designing mobile applications with optimal native experiences.</p>
-                    <div class="skill-tags"><span class="skill-tag">iOS</span><span
-                            class="skill-tag">Android</span><span class="skill-tag">Flutter</span></div>
-                </div>
-                <div class="skill-card reveal reveal-delay-4">
-                    <div class="skill-icon">✨</div>
-                    <h3>Motion & Animation</h3>
-                    <p>qCreating dynamic and engaging animations that enhance user interaction.</p>
-                    <div class="skill-tags"><span class="skill-tag">Framer Motion</span><span
-                            class="skill-tag">GSAP</span><span class="skill-tag">Lottie</span></div>
-                </div>
-                <div class="skill-card reveal reveal-delay-2">
-                    <div class="skill-icon">🖥️</div>
-                    <h3>Backend Basics</h3>
-                    <p>Basic understanding of backend to collaborate effectively with the team.</p>
-                    <div class="skill-tags"><span class="skill-tag">Node.js</span><span class="skill-tag">REST
-                            API</span><span class="skill-tag">Firebase</span></div>
-                </div>
-                <div class="skill-card reveal reveal-delay-3">
-                    <div class="skill-icon">💡</div>
-                    <h3>Brand Identity</h3>
-                    <p>Building a consistent brand identity from logo to color system.</p>
-                    <div class="skill-tags"><span class="skill-tag">Logo Design</span><span class="skill-tag">Style
-                            Guide</span><span class="skill-tag">Branding</span></div>
-                </div>
-            </div>
+      <div class="section-container">
+        <div class="section-header reveal">
+          <span class="section-label">💝 Skills</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">
+            The tools I use every day to turn ideas into reality.
+          </p>
         </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-icon">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Designing intuitive interfaces that create smooth and emotional
+              experiences.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span
+              ><span class="skill-tag">Adobe XD</span
+              ><span class="skill-tag">Prototyping</span>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon">💻</div>
+            <h3>Frontend Development</h3>
+            <p>
+              Building modern, responsive, and high-performance web interfaces.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span
+              ><span class="skill-tag">Vue.js</span
+              ><span class="skill-tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-delay-3">
+            <div class="skill-icon">📱</div>
+            <h3>Mobile Design</h3>
+            <p>
+              Designing mobile applications with optimal native experiences.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">iOS</span
+              ><span class="skill-tag">Android</span
+              ><span class="skill-tag">Flutter</span>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-delay-4">
+            <div class="skill-icon">✨</div>
+            <h3>Motion & Animation</h3>
+            <p>
+              qCreating dynamic and engaging animations that enhance user
+              interaction.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Framer Motion</span
+              ><span class="skill-tag">GSAP</span
+              ><span class="skill-tag">Lottie</span>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon">🖥️</div>
+            <h3>Backend Basics</h3>
+            <p>
+              Basic understanding of backend to collaborate effectively with the
+              team.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Node.js</span
+              ><span class="skill-tag">REST API</span
+              ><span class="skill-tag">Firebase</span>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-delay-3">
+            <div class="skill-icon">💡</div>
+            <h3>Brand Identity</h3>
+            <p>
+              Building a consistent brand identity from logo to color system.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Logo Design</span
+              ><span class="skill-tag">Style Guide</span
+              ><span class="skill-tag">Branding</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="projects" id="projects">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-label">💖 Projects</span>
-                <h2 class="section-title">My Projects</h2>
-                <p class="section-subtitle">Each project is a work of art created with all my love and dedication.</p>
-            </div>
-            <div class="project-grid">
-                <div class="project-card reveal reveal-delay-1" data-pt-link="dashboard.html">
-                    <div class="project-image">
-                        <div class="project-image-inner pink-grad">🛍️</div>
-                        <div class="project-overlay">
-                            <a href="dashboard.html" class="btn btn-primary" data-pt-link
-                                aria-label="Xem chi tiết dự án CupidBot">
-                                View Details →
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-category">UI/UX Design</div>
-                        <h3 class="project-title">Discord Bot Admin Dashboard</h3>
-                        <p class="project-desc">Admin dashboard for mimi with a minimalist and elegant interface.</p>
-                    </div>
-                </div>
-                <div class="project-card reveal reveal-delay-2">
-                    <div class="project-image">
-                        <div class="project-image-inner rose-grad">🏥</div>
-                        <div class="project-overlay"><a href="#" class="btn" onclick="event.preventDefault()">View
-                                Details →</a></div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-category">Web Application</div>
-                        <h3 class="project-title">CareHub — Health Dashboard</h3>
-                        <p class="project-desc">Health dashboard helps track daily health.
-                        </p>
-                    </div>
-                </div>
-                <div class="project-card reveal reveal-delay-3">
-                    <div class="project-image">
-                        <div class="project-image-inner magenta-grad">🍽️</div>
-                        <div class="project-overlay"><a href="#" class="btn" onclick="event.preventDefault()">View
-                                Details →</a></div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-category">Mobile App</div>
-                        <h3 class="project-title">Savora — Food Delivery</h3>
-                        <p class="project-desc">Food delivery app with warm design and smart recommendation system.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="section-container">
+        <div class="section-header reveal">
+          <span class="section-label">💖 Projects</span>
+          <h2 class="section-title">My Projects</h2>
+          <p class="section-subtitle">
+            Each project is a work of art created with all my love and
+            dedication.
+          </p>
         </div>
+        <div class="project-grid">
+          <div
+            class="project-card reveal reveal-delay-1"
+            data-pt-link="dashboard.html"
+          >
+            <div class="project-image">
+              <div class="project-image-inner pink-grad">🛍️</div>
+              <div class="project-overlay">
+                <a
+                  href="dashboard.html"
+                  class="btn btn-primary"
+                  data-pt-link
+                  aria-label="Xem chi tiết dự án CupidBot"
+                >
+                  View Details →
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">UI/UX Design</div>
+              <h3 class="project-title">Discord Bot Admin Dashboard</h3>
+              <p class="project-desc">
+                Admin dashboard for mimi with a minimalist and elegant
+                interface.
+              </p>
+            </div>
+          </div>
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-image">
+              <div class="project-image-inner rose-grad">🏥</div>
+              <div class="project-overlay">
+                <a href="#" class="btn" onclick="event.preventDefault()"
+                  >View Details →</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Web Application</div>
+              <h3 class="project-title">CareHub — Health Dashboard</h3>
+              <p class="project-desc">
+                Health dashboard helps track daily health.
+              </p>
+            </div>
+          </div>
+          <div class="project-card reveal reveal-delay-3">
+            <div class="project-image">
+              <div class="project-image-inner magenta-grad">🍽️</div>
+              <div class="project-overlay">
+                <a href="#" class="btn" onclick="event.preventDefault()"
+                  >View Details →</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Mobile App</div>
+              <h3 class="project-title">Savora — Food Delivery</h3>
+              <p class="project-desc">
+                Food delivery app with warm design and smart recommendation
+                system.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="contact" id="contact">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-label">💌 Contact</span>
-                <h2 class="section-title">Send me a<br />love letter!</h2>
-                <p class="section-subtitle">Do you have a great idea? Share it with me — I'm always happy to listen.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info reveal">
-                    <h3>Get in touch with me</h3>
-                    <p>I'm always open to new cooperation opportunities. Whether it's a big project or just a "Hello!",
-                        don't hesitate to contact me.</p>
-                    <div class="contact-details">
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">📧</div>
-                            <div class="contact-detail-text">
-                                <strong>nguynquminh2608@gmail.com</strong><span>Email</span>
-                            </div>
-                        </div>
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">📱</div>
-                            <div class="contact-detail-text">
-                                <strong>+84 919 402 200</strong><span>Phone / Zalo</span>
-                            </div>
-                        </div>
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">📍</div>
-                            <div class="contact-detail-text">
-                                <strong>Ho Chi Minh, Vietnam</strong><span>Location</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="love-letter reveal reveal-delay-2" id="loveLetter">
-                    <div class="love-letter-header">Don't be shy, just tell me!</div>
-                    <form id="contactForm" action="https://formsubmit.co/ajax/nguynquminh2608@gmail.com" method="POST">
-                        <!-- Tắt captcha của formsubmit -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name 💗</label>
-                                <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email 💌</label>
-                                <input type="email" id="email" name="email" placeholder="hello@example.com" required />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject ✨</label>
-                            <input type="text" id="subject" name="_subject" placeholder="I want to cooperate on..." />
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message 💕</label>
-                            <textarea id="message" name="message" placeholder="Tell me about your project..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn-send" id="btnSend"><span>Send Message</span> 💖</button>
-                    </form>
-                    <div class="success-message" id="successMessage">
-                        <div class="success-icon">💖</div>
-                        <h3>Đã gửi thành công!</h3>
-                        <p>Cảm ơn bạn đã gửi thư. Mình sẽ phản hồi sớm nhất nhé! 🌸</p>
-                    </div>
-                </div>
-            </div>
+      <div class="section-container">
+        <div class="section-header reveal">
+          <span class="section-label">💌 Contact</span>
+          <h2 class="section-title">Send me a<br />love letter!</h2>
+          <p class="section-subtitle">
+            Do you have a great idea? Share it with me — I'm always happy to
+            listen.
+          </p>
         </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Get in touch with me</h3>
+            <p>
+              I'm always open to new cooperation opportunities. Whether it's a
+              big project or just a "Hello!", don't hesitate to contact me.
+            </p>
+            <div class="contact-details">
+              <div class="contact-detail">
+                <div class="contact-detail-icon">📧</div>
+                <div class="contact-detail-text">
+                  <strong>nguynquminh2608@gmail.com</strong><span>Email</span>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-detail-icon">📱</div>
+                <div class="contact-detail-text">
+                  <strong>+84 919 402 200</strong><span>Phone / Zalo</span>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-detail-icon">📍</div>
+                <div class="contact-detail-text">
+                  <strong>Ho Chi Minh, Vietnam</strong><span>Location</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="love-letter reveal reveal-delay-2" id="loveLetter">
+            <div class="love-letter-header">Don't be shy, just tell me!</div>
+            <form
+              id="contactForm"
+              action="https://formsubmit.co/ajax/nguynquminh2608@gmail.com"
+              method="POST"
+            >
+              <!-- Tắt captcha của formsubmit -->
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name 💗</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Nguyễn Văn A"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email 💌</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="hello@example.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject ✨</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="_subject"
+                  placeholder="I want to cooperate on..."
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message 💕</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-send" id="btnSend">
+                <span>Send Message</span> 💖
+              </button>
+            </form>
+            <div class="success-message" id="successMessage">
+              <div class="success-icon">💖</div>
+              <h3>Đã gửi thành công!</h3>
+              <p>Cảm ơn bạn đã gửi thư. Mình sẽ phản hồi sớm nhất nhé! 🌸</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer class="footer" id="footer">
-        <div class="footer-wave">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path
-                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6.4,69.77-17.84,101.73-29.66,40.12-14.88,81.66-33.8,125.87-37.56,36.46-3.1,73.78,5.6,109,15.45,15.81,4.42,31.37,9.71,47,14.53V0Z"
-                    fill="var(--cream)" opacity="1"></path>
-            </svg>
+      <div class="footer-wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6.4,69.77-17.84,101.73-29.66,40.12-14.88,81.66-33.8,125.87-37.56,36.46-3.1,73.78,5.6,109,15.45,15.81,4.42,31.37,9.71,47,14.53V0Z"
+            fill="var(--cream)"
+            opacity="1"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="footer-bg-hearts">
+        <span class="footer-bg-heart">💖</span>
+        <span class="footer-bg-heart">💗</span>
+        <span class="footer-bg-heart">♥</span>
+        <span class="footer-bg-heart">💕</span>
+        <span class="footer-bg-heart">🩷</span>
+        <span class="footer-bg-heart">💖</span>
+        <span class="footer-bg-heart">💗</span>
+        <span class="footer-bg-heart">♥</span>
+      </div>
+
+      <div class="footer-glow footer-glow-1"></div>
+      <div class="footer-glow footer-glow-2"></div>
+      <div class="footer-glow footer-glow-3"></div>
+
+      <div class="footer-content-wrapper">
+        <div class="footer-top reveal">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              Lovelyn <span class="footer-heart">♥</span>
+            </div>
+            <p class="footer-tagline">
+              "Design is not just what it looks like — design is how it makes
+              you feel."
+            </p>
+            <p class="footer-description">
+              Tạo ra những trải nghiệm số tuyệt vời bằng tất cả tình yêu và sự
+              tận tâm. Mỗi pixel, mỗi dòng code đều mang một câu chuyện riêng.
+            </p>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Nhận thông tin mới nhất 💌</h3>
+            <p>
+              Đăng ký để cập nhật các dự án mới, bài viết chia sẻ kinh nghiệm và
+              cảm hứng thiết kế từ mình nhé.
+            </p>
+            <form
+              class="newsletter-form"
+              onsubmit="
+                event.preventDefault();
+                this.querySelector('input').value = 'Đã đăng ký! 💖';
+                this.querySelector('button').textContent = '♥ Cảm ơn!';
+              "
+            >
+              <input
+                type="email"
+                placeholder="Email yêu thương của bạn..."
+                required
+              />
+              <button type="submit" class="newsletter-btn">Đăng ký 💕</button>
+            </form>
+          </div>
         </div>
 
-        <div class="footer-bg-hearts">
-            <span class="footer-bg-heart">💖</span>
-            <span class="footer-bg-heart">💗</span>
-            <span class="footer-bg-heart">♥</span>
-            <span class="footer-bg-heart">💕</span>
-            <span class="footer-bg-heart">🩷</span>
-            <span class="footer-bg-heart">💖</span>
-            <span class="footer-bg-heart">💗</span>
-            <span class="footer-bg-heart">♥</span>
+        <div class="footer-middle">
+          <div class="footer-col reveal reveal-delay-1">
+            <h4>Điều hướng</h4>
+            <ul>
+              <li><a href="#hero">Trang chủ</a></li>
+              <li><a href="#about">Về tôi</a></li>
+              <li><a href="#skills">Kỹ năng</a></li>
+              <li><a href="#projects">Dự án</a></li>
+              <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+          </div>
+          <div class="footer-col reveal reveal-delay-2">
+            <h4>Dịch vụ</h4>
+            <ul>
+              <li><a href="#">UI/UX Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Mobile App Design</a></li>
+              <li><a href="#">Brand Identity</a></li>
+              <li><a href="#">Consulting</a></li>
+            </ul>
+          </div>
+          <div class="footer-col reveal reveal-delay-3">
+            <h4>Tài nguyên</h4>
+            <ul>
+              <li><a href="#">Blog & Chia sẻ</a></li>
+              <li><a href="#">Design Resources</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-social-col reveal reveal-delay-4">
+            <h4>Kết nối</h4>
+            <div class="social-main">
+              <a
+                href="https://www.instagram.com/nguynquminh/"
+                class="social-card"
+                target="_blank"
+              >
+                <svg
+                  fill-rule="nonzero"
+                  height="30px"
+                  width="30px"
+                  viewBox="0,0,256,256"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="instagram"
+                >
+                  <g
+                    style="mix-blend-mode: normal"
+                    stroke-width="1"
+                    stroke="none"
+                    fill-rule="nonzero"
+                  >
+                    <g transform="scale(8,8)">
+                      <path
+                        d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a
+                href="https://x.com/nguynquminhh"
+                class="social-card"
+                target="_blank"
+              >
+                <svg
+                  height="30px"
+                  width="30px"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="twitter"
+                >
+                  <path
+                    d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/qminmeomeo/"
+                class="social-card"
+                target="_blank"
+              >
+                <svg
+                  height="30px"
+                  width="30px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="facebook"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/@nguynquminhh"
+                class="social-card"
+                target="_blank"
+              >
+                <svg
+                  height="30px"
+                  width="30px"
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="youtube"
+                >
+                  <path
+                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://uiverse.io/profile/nguynquminh"
+                class="social-card"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 100 100"
+                  height="23px"
+                  width="23px"
+                  class="uiverse"
+                >
+                  <path
+                    fill="url(#paint0_linear_501_142)"
+                    d="M38.0481 4.82927C38.0481 2.16214 40.018 0 42.4481 0H51.2391C53.6692 0 55.6391 2.16214 55.6391 4.82927V40.1401C55.6391 48.8912 53.2343 55.6657 48.4248 60.4636C43.6153 65.2277 36.7304 67.6098 27.7701 67.6098C18.8099 67.6098 11.925 65.2953 7.11548 60.6663C2.37183 56.0036 3.8147e-06 49.2967 3.8147e-06 40.5456V4.82927C3.8147e-06 2.16213 1.96995 0 4.4 0H13.2405C15.6705 0 17.6405 2.16214 17.6405 4.82927V39.1265C17.6405 43.7892 18.4805 47.2018 20.1605 49.3642C21.8735 51.5267 24.4759 52.6079 27.9678 52.6079C31.4596 52.6079 34.0127 51.5436 35.6268 49.4149C37.241 47.2863 38.0481 43.8399 38.0481 39.0758V4.82927Z"
+                  ></path>
+                  <path
+                    fill="url(#paint1_linear_501_142)"
+                    d="M86.9 61.8682C86.9 64.5353 84.9301 66.6975 82.5 66.6975H73.6595C71.2295 66.6975 69.2595 64.5353 69.2595 61.8682V4.82927C69.2595 2.16214 71.2295 0 73.6595 0H82.5C84.9301 0 86.9 2.16214 86.9 4.82927V61.8682Z"
+                  ></path>
+                  <path
+                    fill="url(#paint2_linear_501_142)"
+                    d="M2.86102e-06 83.2195C2.86102e-06 80.5524 1.96995 78.3902 4.4 78.3902H83.6C86.0301 78.3902 88 80.5524 88 83.2195V89.1707C88 91.8379 86.0301 94 83.6 94H4.4C1.96995 94 0 91.8379 0 89.1707L2.86102e-06 83.2195Z"
+                  ></path>
+                  <defs>
+                    <linearGradient
+                      gradientUnits="userSpaceOnUse"
+                      y2="87.6201"
+                      x2="96.1684"
+                      y1="0"
+                      x1="0"
+                      id="paint0_linear_501_142"
+                    >
+                      <stop stop-color="#BF66FF"></stop>
+                      <stop stop-color="#6248FF" offset="0.510417"></stop>
+                      <stop stop-color="#00DDEB" offset="1"></stop>
+                    </linearGradient>
+                    <linearGradient
+                      gradientUnits="userSpaceOnUse"
+                      y2="87.6201"
+                      x2="96.1684"
+                      y1="0"
+                      x1="0"
+                      id="paint1_linear_501_142"
+                    >
+                      <stop stop-color="#BF66FF"></stop>
+                      <stop stop-color="#6248FF" offset="0.510417"></stop>
+                      <stop stop-color="#00DDEB" offset="1"></stop>
+                    </linearGradient>
+                    <linearGradient
+                      gradientUnits="userSpaceOnUse"
+                      y2="87.6201"
+                      x2="96.1684"
+                      y1="0"
+                      x1="0"
+                      id="paint2_linear_501_142"
+                    >
+                      <stop stop-color="#BF66FF"></stop>
+                      <stop stop-color="#6248FF" offset="0.510417"></stop>
+                      <stop stop-color="#00DDEB" offset="1"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </a>
+              <a
+                href="https://discord.com/channels/@nguynquminhh"
+                class="social-card"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 48 48"
+                  width="30px"
+                  height="30px"
+                  class="discord"
+                >
+                  <path
+                    d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/nguynquminh"
+                class="social-card"
+                target="_blank"
+              >
+                <svg
+                  height="30px"
+                  width="30px"
+                  viewBox="0 0 30 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="github"
+                >
+                  <path
+                    d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://web.telegram.org/k/#@qminmeomeo"
+                class="social-card"
+                target="_blank"
+              >
+                <svg
+                  height="30px"
+                  width="30px"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="telegram"
+                >
+                  <path d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
+                  <path
+                    d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"
+                    fill="#fff"
+                  ></path>
+                  <path
+                    d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"
+                    fill="#b0bec5"
+                  ></path>
+                  <path
+                    d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"
+                    fill="#cfd8dc"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.tiktok.com/@vangsuadangiu"
+                class="social-card"
+                target="_blank"
+              >
+                <svg
+                  height="30px"
+                  width="30px"
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="tiktok"
+                >
+                  <path
+                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                  ></path>
+                </svg>
+              </a>
+              <p class="social-text">HOVER<br /><br />FOR<br /><br />CONTACT</p>
+              <div class="main_back"></div>
+            </div>
+          </div>
         </div>
 
-        <div class="footer-glow footer-glow-1"></div>
-        <div class="footer-glow footer-glow-2"></div>
-        <div class="footer-glow footer-glow-3"></div>
-
-        <div class="footer-content-wrapper">
-
-            <div class="footer-top reveal">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        Lovelyn <span class="footer-heart">♥</span>
-                    </div>
-                    <p class="footer-tagline">"Design is not just what it looks like — design is how it makes you feel."
-                    </p>
-                    <p class="footer-description">
-                        Tạo ra những trải nghiệm số tuyệt vời bằng tất cả tình yêu và sự tận tâm. Mỗi pixel, mỗi dòng
-                        code đều mang một câu chuyện riêng.
-                    </p>
-                </div>
-                <div class="footer-newsletter">
-                    <h3>Nhận thông tin mới nhất 💌</h3>
-                    <p>Đăng ký để cập nhật các dự án mới, bài viết chia sẻ kinh nghiệm và cảm hứng thiết kế từ mình nhé.
-                    </p>
-                    <form class="newsletter-form"
-                        onsubmit="event.preventDefault(); this.querySelector('input').value='Đã đăng ký! 💖'; this.querySelector('button').textContent='♥ Cảm ơn!';">
-                        <input type="email" placeholder="Email yêu thương của bạn..." required />
-                        <button type="submit" class="newsletter-btn">Đăng ký 💕</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="footer-middle">
-                <div class="footer-col reveal reveal-delay-1">
-                    <h4>Điều hướng</h4>
-                    <ul>
-                        <li><a href="#hero">Trang chủ</a></li>
-                        <li><a href="#about">Về tôi</a></li>
-                        <li><a href="#skills">Kỹ năng</a></li>
-                        <li><a href="#projects">Dự án</a></li>
-                        <li><a href="#contact">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col reveal reveal-delay-2">
-                    <h4>Dịch vụ</h4>
-                    <ul>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile App Design</a></li>
-                        <li><a href="#">Brand Identity</a></li>
-                        <li><a href="#">Consulting</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col reveal reveal-delay-3">
-                    <h4>Tài nguyên</h4>
-                    <ul>
-                        <li><a href="#">Blog & Chia sẻ</a></li>
-                        <li><a href="#">Design Resources</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-social-col reveal reveal-delay-4">
-                    <h4>Kết nối</h4>
-                    <div class="social-main">
-                        <a href="https://www.instagram.com/nguynquminh/" class="social-card" target="_blank">
-                            <svg fill-rule="nonzero" height="30px" width="30px" viewBox="0,0,256,256"
-                                xmlns="http://www.w3.org/2000/svg" class="instagram">
-                                <g style="mix-blend-mode:normal" stroke-width="1" stroke="none" fill-rule="nonzero">
-                                    <g transform="scale(8,8)">
-                                        <path
-                                            d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z">
-                                        </path>
-                                    </g>
-                                </g>
-                            </svg>
-                        </a>
-                        <a href="https://x.com/nguynquminhh" class="social-card" target="_blank">
-                            <svg height="30px" width="30px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
-                                class="twitter">
-                                <path
-                                    d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/qminmeomeo/" class="social-card" target="_blank">
-                            <svg height="30px" width="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                class="facebook">
-                                <path
-                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://www.youtube.com/@nguynquminhh" class="social-card" target="_blank">
-                            <svg height="30px" width="30px" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"
-                                class="youtube">
-                                <path
-                                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://uiverse.io/profile/nguynquminh" class="social-card" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="23px" width="23px"
-                                class="uiverse">
-                                <path fill="url(#paint0_linear_501_142)"
-                                    d="M38.0481 4.82927C38.0481 2.16214 40.018 0 42.4481 0H51.2391C53.6692 0 55.6391 2.16214 55.6391 4.82927V40.1401C55.6391 48.8912 53.2343 55.6657 48.4248 60.4636C43.6153 65.2277 36.7304 67.6098 27.7701 67.6098C18.8099 67.6098 11.925 65.2953 7.11548 60.6663C2.37183 56.0036 3.8147e-06 49.2967 3.8147e-06 40.5456V4.82927C3.8147e-06 2.16213 1.96995 0 4.4 0H13.2405C15.6705 0 17.6405 2.16214 17.6405 4.82927V39.1265C17.6405 43.7892 18.4805 47.2018 20.1605 49.3642C21.8735 51.5267 24.4759 52.6079 27.9678 52.6079C31.4596 52.6079 34.0127 51.5436 35.6268 49.4149C37.241 47.2863 38.0481 43.8399 38.0481 39.0758V4.82927Z">
-                                </path>
-                                <path fill="url(#paint1_linear_501_142)"
-                                    d="M86.9 61.8682C86.9 64.5353 84.9301 66.6975 82.5 66.6975H73.6595C71.2295 66.6975 69.2595 64.5353 69.2595 61.8682V4.82927C69.2595 2.16214 71.2295 0 73.6595 0H82.5C84.9301 0 86.9 2.16214 86.9 4.82927V61.8682Z">
-                                </path>
-                                <path fill="url(#paint2_linear_501_142)"
-                                    d="M2.86102e-06 83.2195C2.86102e-06 80.5524 1.96995 78.3902 4.4 78.3902H83.6C86.0301 78.3902 88 80.5524 88 83.2195V89.1707C88 91.8379 86.0301 94 83.6 94H4.4C1.96995 94 0 91.8379 0 89.1707L2.86102e-06 83.2195Z">
-                                </path>
-                                <defs>
-                                    <linearGradient gradientUnits="userSpaceOnUse" y2="87.6201" x2="96.1684" y1="0"
-                                        x1="0" id="paint0_linear_501_142">
-                                        <stop stop-color="#BF66FF"></stop>
-                                        <stop stop-color="#6248FF" offset="0.510417"></stop>
-                                        <stop stop-color="#00DDEB" offset="1"></stop>
-                                    </linearGradient>
-                                    <linearGradient gradientUnits="userSpaceOnUse" y2="87.6201" x2="96.1684" y1="0"
-                                        x1="0" id="paint1_linear_501_142">
-                                        <stop stop-color="#BF66FF"></stop>
-                                        <stop stop-color="#6248FF" offset="0.510417"></stop>
-                                        <stop stop-color="#00DDEB" offset="1"></stop>
-                                    </linearGradient>
-                                    <linearGradient gradientUnits="userSpaceOnUse" y2="87.6201" x2="96.1684" y1="0"
-                                        x1="0" id="paint2_linear_501_142">
-                                        <stop stop-color="#BF66FF"></stop>
-                                        <stop stop-color="#6248FF" offset="0.510417"></stop>
-                                        <stop stop-color="#00DDEB" offset="1"></stop>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </a>
-                        <a href="https://discord.com/channels/@nguynquminhh" class="social-card" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px"
-                                class="discord">
-                                <path
-                                    d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/nguynquminh" class="social-card" target="_blank">
-                            <svg height="30px" width="30px" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"
-                                class="github">
-                                <path
-                                    d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://web.telegram.org/k/#@qminmeomeo" class="social-card" target="_blank">
-                            <svg height="30px" width="30px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
-                                class="telegram">
-                                <path d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
-                                <path
-                                    d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"
-                                    fill="#fff"></path>
-                                <path
-                                    d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"
-                                    fill="#b0bec5"></path>
-                                <path
-                                    d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"
-                                    fill="#cfd8dc"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.tiktok.com/@vangsuadangiu" class="social-card" target="_blank">
-                            <svg height="30px" width="30px" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"
-                                class="tiktok">
-                                <path
-                                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z">
-                                </path>
-                            </svg>
-                        </a>
-                        <p class="social-text">HOVER<br /><br />FOR<br /><br />CONTACT</p>
-                        <div class="main_back"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-quote reveal">
-                <blockquote>
-                    Tình yêu không chỉ là cảm xúc — nó là cách ta đặt trái tim vào mọi thứ ta tạo ra. Mỗi dự án là một
-                    lá thư tình gửi đến thế giới.
-                    <span class="quote-author">— Lovelyn ♥</span>
-                </blockquote>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="footer-copyright">
-                    © 2026 <a href="#hero">Lovelyn</a>. Made with ♥ in Vietnam.
-                </div>
-                <div class="footer-heartbeat">
-                    <span class="pulse-heart">♥</span>Status: Active
-                </div>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">Sitemap</a>
-                </div>
-            </div>
+        <div class="footer-quote reveal">
+          <blockquote>
+            Tình yêu không chỉ là cảm xúc — nó là cách ta đặt trái tim vào mọi
+            thứ ta tạo ra. Mỗi dự án là một lá thư tình gửi đến thế giới.
+            <span class="quote-author">— Lovelyn ♥</span>
+          </blockquote>
         </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2026 <a href="#hero">Lovelyn</a>. Made with ♥ in Vietnam.
+          </div>
+          <div class="footer-heartbeat">
+            <span class="pulse-heart">♥</span>Status: Active
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      ↑
+    </button>
 
     <script src="assets/js/transition.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,6 @@
+## 2024-05-18 - [Optimized Discord API Concurrent Calls in Channel Setup]
+**Learning:** Performing multiple Discord API creation calls (e.g., text/voice channels) inside a sequential loop is slow and blocks setup times. However, wrapping all creations in a raw `Promise.all` triggers a rate limit (HTTP 429). The `mimi` bot architecture needs bulk setup and tear down (e.g. `eventChannelService.js`), where this issue is very apparent when an event has multiple teams.
+**Action:** Always refactor sequential I/O operations into bounded concurrency or batch execution (e.g., processing arrays in chunks of 3-5 with `Promise.all`) when interacting directly with Discord APIs to maximize speed safely.
+## 2024-05-24 - Discord API Rate Limit vs Parallelization
+**Learning:** Parallelizing channel operations via un-chunked `Promise.all` can cause HTTP 429 rate limit errors from the Discord API. However, doing things fully sequentially ignores opportunities to parallelize non-conflicting tasks, such as creating independent voice and text channels.
+**Action:** When working with the Discord API, optimize by using bounded concurrency (like processing requests in chunks of 3-5) and concurrently awaiting structurally independent calls (e.g., creating a team's voice and text channels together), avoiding unconstrained `Promise.all` over large arrays.

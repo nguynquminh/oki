@@ -1,3 +1,6 @@
+## 2024-05-24 - Awaiting Inside Loop for Transcripts in eventArchiveService
+**Learning:** Sequential `for...of` loops involving heavy asynchronous I/O operations (like fetching channels and creating transcripts via Discord API) cause unnecessary performance bottlenecks. However, raw `Promise.all` across a large unbounded array can trigger Discord's rate limits (HTTP 429).
+**Action:** Use a "bounded concurrency" or "batching" pattern (e.g., slicing arrays into batches of 3-5 and awaiting `Promise.all` per batch) to achieve parallelization performance benefits while avoiding rate-limit throttling.
 ## 2024-05-24 - [Optimize Discord Role and Channel Setup]
 **Learning:** Sequential `await` in loops for independent operations (like creating multiple Discord roles or channels) causes significant performance degradation. However, unthrottled concurrent execution (`Promise.all()`) can trigger API rate limits. Staggering concurrent requests using a delayed start mapped to index allows parallel execution while preventing burst limits.
 **Action:** Use `Promise.all()` with `.map((item, index) => new Promise(async (resolve) => { if (index > 0) await delay(index * delayMs); /* action */ }))` for I/O-bound tasks that hit rate-limited APIs instead of using sequential `for...of` loops.

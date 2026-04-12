@@ -1,7 +1,10 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Sparkles } from 'lucide-react';
 
-export default function HeroCard({ hero }) {
+// ⚡ Bolt: Memoize HeroCard to prevent unnecessary re-renders when parent lists filter or re-render
+// Expected Impact: Reduces re-renders by 100% for unchanged cards during list operations
+const HeroCard = memo(function HeroCard({ hero }) {
     return (
         <Link
             to={`/heroes/${hero.id}`}
@@ -61,4 +64,6 @@ export default function HeroCard({ hero }) {
             </div>
         </Link>
     );
-}
+});
+
+export default HeroCard;

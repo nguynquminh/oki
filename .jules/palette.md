@@ -7,3 +7,6 @@
 ## YYYY-MM-DD - [Title]
 **Learning:** [UX/a11y insight]
 **Action:** [How to apply next time]
+## 2026-04-12 - Proper Screen Reader Support for Custom React Modals
+**Learning:** Custom modal dialogs (like `GlassModal.jsx`) are invisible to screen readers without explicit ARIA attributes. A `<div>` masquerading as a modal needs `role="dialog"`, `aria-modal="true"`, and must link its title via `aria-labelledby` pointing to the title element's `id`.
+**Action:** When building or maintaining custom modals, always implement the required ARIA dialog pattern (`role="dialog"`, `aria-modal="true"`, `aria-labelledby`) so assistive technologies recognize when focus is trapped and can accurately announce the dialog's purpose.

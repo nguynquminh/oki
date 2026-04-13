@@ -17,16 +17,17 @@ class StatsCollector {
         return date.toISOString().split('T')[0];
     }
 
+    // ⚡ Bolt: Use Promise.all to parallelize independent DB operations and rely on updateStats' upsert capability to eliminate redundant findOrCreate queries.
+    // Expected Impact: Reduces database queries per increment from 4 sequential to 2 parallel, significantly improving performance.
     async incrementMessage(guildId) {
         if (!guildId) return;
 
         try {
-            await GuildStats.findOrCreate(guildId);
-            await GuildStats.updateStats(guildId, { totalMessages: 1 });
-
             const today = this._getDateKey(new Date());
-            await dailyStats.findOrCreate(guildId, today);
-            await dailyStats.updateStats(guildId, today, { messages: 1 });
+            await Promise.all([
+                GuildStats.updateStats(guildId, { totalMessages: 1 }),
+                dailyStats.updateStats(guildId, today, { messages: 1 })
+            ]);
 
             logger.debug(`📝 Message recorded for guild ${guildId}`);
         } catch (err) {
@@ -38,9 +39,12 @@ class StatsCollector {
         if (!guildId) return;
 
         try {
-            await GuildStats.findOrCreate(guildId);
             const today = this._getDateKey(new Date());
-            await dailyStats.findOrCreate(guildId, today);
+            await Promise.all([
+                GuildStats.findOrCreate(guildId),
+                dailyStats.findOrCreate(guildId, today)
+            ]);
+
             logger.debug(`⚙️  Command recorded for guild ${guildId}`);
         } catch (err) {
             logger.error('Error incrementing command:', err);
@@ -51,12 +55,11 @@ class StatsCollector {
         if (!guildId) return;
 
         try {
-            await GuildStats.findOrCreate(guildId);
-            await GuildStats.updateStats(guildId, { totalJoins: 1 });
-
             const today = this._getDateKey(new Date());
-            await dailyStats.findOrCreate(guildId, today);
-            await dailyStats.updateStats(guildId, today, { joins: 1 });
+            await Promise.all([
+                GuildStats.updateStats(guildId, { totalJoins: 1 }),
+                dailyStats.updateStats(guildId, today, { joins: 1 })
+            ]);
 
             logger.debug(`👋 Join recorded for guild ${guildId}`);
         } catch (err) {
@@ -68,12 +71,11 @@ class StatsCollector {
         if (!guildId) return;
 
         try {
-            await GuildStats.findOrCreate(guildId);
-            await GuildStats.updateStats(guildId, { totalLeaves: 1 });
-
             const today = this._getDateKey(new Date());
-            await dailyStats.findOrCreate(guildId, today);
-            await dailyStats.updateStats(guildId, today, { leaves: 1 });
+            await Promise.all([
+                GuildStats.updateStats(guildId, { totalLeaves: 1 }),
+                dailyStats.updateStats(guildId, today, { leaves: 1 })
+            ]);
 
             logger.debug(`👋 Leave recorded for guild ${guildId}`);
         } catch (err) {

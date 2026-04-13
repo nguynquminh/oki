@@ -1,0 +1,25 @@
+
+╔════════════════════════════════════════════════════╗
+║  🏰 LIÊN QUÂN MOBILE API                          ║
+╚════════════════════════════════════════════════════╝
+
+📡 Server URL:      http://localhost:3000
+❤️  Health Check:    http://localhost:3000/health
+🌍 API Base URL:     http://localhost:3000/api/v1
+🌐 Environment:      development
+
+📚 Available Endpoints:
+  • Heroes:        GET /api/v1/heroes
+  • Equipments:    GET /api/v1/equipments
+  • Badges:        GET /api/v1/badges
+  • Runes:         GET /api/v1/runes
+  • Game Modes:    GET /api/v1/gamemodes
+  • Spells:        GET /api/v1/spells
+
+🔗 Try: curl http://localhost:3000/health
+
+[2026-04-13T06:06:12.686Z] GET /api/v1/heroes?limit=100
+[2026-04-13T06:06:12.728Z] GET /api/v1/heroes?limit=100
+[2026-04-13T06:07:32.988Z] GET /api/v1/heroes?limit=100
+[2026-04-13T06:08:17.660Z] GET /api/v1/heroes?limit=100
+[2026-04-13T06:08:54.711Z] GET /api/v1/heroes?limit=100

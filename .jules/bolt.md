@@ -13,3 +13,7 @@
 ## 2024-05-24 - [React List Rendering Optimization]
 **Learning:** In large React list components with complex filter states (like the Hero list), parent component state changes trigger re-renders of all child elements. Since the cards contain images and complex layouts, these unnecessary re-renders create a measurable performance impact on the frontend.
 **Action:** Use `React.memo` to wrap list item components (e.g., `HeroCard`) to prevent them from re-rendering unless their specific props change, significantly improving list filtering and search performance.
+
+## 2026-04-13 - [Redundant findOrCreate with upsert in Mongoose]
+**Learning:** The `mimi` application uses a sequential pattern of `await findOrCreate()` followed by `await updateStats()` to increment counters. However, `updateStats()` already utilizes Mongoose's `{ upsert: true }` option, which natively handles document creation if it doesn't exist. The `findOrCreate` call is a redundant database query.
+**Action:** When working with Mongoose update methods that use `upsert: true`, remove preceding `findOrCreate` or explicit existence checks to eliminate redundant database calls. Furthermore, unrelated updates (like updating global and daily stats simultaneously) should be run in parallel using `Promise.all()` to halve the query latency.

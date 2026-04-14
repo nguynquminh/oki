@@ -1,0 +1,6 @@
+
+> lienquan-frontend@0.0.0 preview /app/lienquan-frontend
+> vite preview
+
+  ➜  Local:   http://localhost:4173/
+  ➜  Network: use --host to expose
